@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main entrypoint renders correctly 1`] = `
+exports[`my applets screen renders correctly 1`] = `
 <View>
   <AppletsHeader />
   <AppletsFeed

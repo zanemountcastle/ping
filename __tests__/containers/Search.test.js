@@ -1,20 +1,20 @@
 import React from 'react';
-import Applets from '../../src/screens/Applets';
+import Search from '../../src/screens/Search';
 
 import ShallowRenderer from 'react-test-renderer/shallow';
 
-describe('my applets screen', () => {
+describe('search screen', () => {
 
   it('renders without crashing', () => {
     // Shallow render <App /> and not it's child components
     // Standard react-test-renderer doesn't allow shallow rendering
     const renderer = new ShallowRenderer();
-    expect(renderer.render(<Applets />)).toBeTruthy();
+    expect(renderer.render(<Search />)).toBeTruthy();
   });
 
   it('renders correctly', () => {
     const renderer = new ShallowRenderer();
-    expect(renderer.render(<Applets />)).toMatchSnapshot();
+    expect(renderer.render(<Search />)).toMatchSnapshot();
   });
 
 });
