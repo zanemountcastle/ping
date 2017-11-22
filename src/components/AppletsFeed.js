@@ -11,7 +11,14 @@ import AppletPreview from './AppletPreview';
 
 export default class AppletsFeed extends Component {
 
-  render() {
+  render(callback) {
+
+      // console.log('Ready....go!');
+      setTimeout(() => {
+        // console.log('Times up -- stop!');
+        callback;// && callback();
+      }, 1000);
+
     return (
       <ScrollView style={styles.container}>
         {this.props.feeds.map((feed) => (
