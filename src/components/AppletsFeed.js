@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   Text,
   View,
-  ScrollView
+  ScrollView,
+  StyleSheet
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
@@ -12,7 +13,7 @@ export default class AppletsFeed extends Component {
 
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={styles.container}>
         {this.props.feeds.map((feed) => (
           <AppletPreview key={feed.id} data={feed} />
         ))}
@@ -21,14 +22,9 @@ export default class AppletsFeed extends Component {
   }
 }
 
-//
-// <List>
-//   {this.props.feeds.map((feed) => (
-//     <ListItem
-//       key={feed.id}
-//       title={feed.title}
-//       subtitle={feed.lastActive}
-//       hideChevron
-//     />
-//   ))}
-// </List>
+let styles = StyleSheet.create({
+  container: {
+    // marginBottom: 70,
+    // paddingBottom: 50,
+  },
+});

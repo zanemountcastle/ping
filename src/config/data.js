@@ -25,7 +25,7 @@ export const feeds = [
   },
   {
     "id": "114",
-    "title": "The Saints just scored a touchdown.",
+    "title": "The Saints score a touchdown.",
     "organization": "Saints",
     "color": "#40403F",
     "status": "On",
