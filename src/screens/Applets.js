@@ -5,9 +5,9 @@ import { Header } from 'react-native-elements';
 import AppletsFeed from '../components/AppletsFeed';
 import AppletsHeader from '../components/AppletsHeader';
 
-import { feeds } from '../config/data';
+import { feeds } from '../../static/data';
 
-export default class Discover extends Component {
+export default class Applets extends Component {
 
   render() {
     return (

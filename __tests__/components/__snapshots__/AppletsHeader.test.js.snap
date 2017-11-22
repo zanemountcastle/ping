@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`applet preview renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#476DC5",
+          "borderBottomColor": "#f2f2f2",
+          "borderBottomWidth": 1,
+          "height": 70,
+          "padding": 15,
+          "width": 750,
+        },
+        undefined,
+        Object {
+          "backgroundColor": "#fff",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        onPress={undefined}
+        style={
+          Array [
+            false,
+            false,
+            false,
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+        underlayColor="white"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#4D4C4C",
+                "fontSize": 24,
+              },
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ],
+              Object {
+                "fontFamily": "Material Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Object {
+              "color": "#4D4C4C",
+              "fontSize": 20,
+              "fontWeight": "700",
+            },
+          ]
+        }
+      >
+        My Applets
+      </Text>
+      <View
+        onPress={undefined}
+        style={
+          Array [
+            false,
+            false,
+            false,
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+        underlayColor="white"
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#4D4C4C",
+                "fontSize": 24,
+              },
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+              ],
+              Object {
+                "fontFamily": "Material Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
