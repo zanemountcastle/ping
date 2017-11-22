@@ -1,6 +1,5 @@
 import React from 'react';
 import AppletHeader from '../../src/components/AppletsHeader';
-import { feeds } from '../../static/data.js';
 
 import renderer from 'react-test-renderer';
 
