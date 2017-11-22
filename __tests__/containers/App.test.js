@@ -1,9 +1,20 @@
 import React from 'react';
 import App from '../../App';
 
-import renderer from 'react-test-renderer';
+import ShallowRenderer from 'react-test-renderer/shallow';
 
-it('renders without crashing', () => {
-  const rendered = renderer.create(<App />).toJSON();
-  expect(rendered).toBeTruthy();
+describe('main entrypoint', () => {
+
+  it('renders without crashing', () => {
+    // Shallow render <App /> and not it's child components
+    // Standard react-test-renderer doesn't allow shallow rendering
+    const renderer = new ShallowRenderer();
+    expect(renderer.render(<App />)).toBeTruthy();
+  });
+
+  it('renders correctly', () => {
+    const renderer = new ShallowRenderer();
+    expect(renderer.render(<App />)).toMatchSnapshot();
+  });
+
 });
