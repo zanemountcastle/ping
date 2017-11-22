@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Card } from 'react-native-elements';
 
 export default class AppletPreview extends Component {
   componentWillMount() {
