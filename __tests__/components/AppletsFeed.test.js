@@ -24,12 +24,12 @@ describe('applet preview', () => {
   //   expect(setTimeout.mock.calls.length).toBe(1);
   //   expect(setTimeout.mock.calls[0][1]).toBe(1000);
   // });
-  it('renders 3 times', () => {
-    // const timerGame = require('../../src/components/AppletsFeed');
-    const view = renderer.create(<AppletFeed feeds={feeds} />).toJSON();
-    jest.advanceTimersByTime(1000); // in jest 21.3.0 advanced timer capability
-    expect(setTimeout.mock.calls.length).toBe(3);
-    expect(setTimeout.mock.calls[0][1]).toBe(1000);
-  });
+  // it('renders 3 times', () => {
+  //   // const timerGame = require('../../src/components/AppletsFeed');
+  //   const view = renderer.create(<AppletFeed feeds={feeds} />).toJSON();
+  //   jest.advanceTimersByTime(1000); // in jest 21.3.0 advanced timer capability
+  //   expect(setTimeout.mock.calls.length).toBe(3);
+  //   expect(setTimeout.mock.calls[0][1]).toBe(1000);
+  // });
 
 });
