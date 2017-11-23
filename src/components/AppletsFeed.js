@@ -15,7 +15,7 @@ export default class AppletsFeed extends Component {
     return (
       <ScrollView style={styles.container}>
         {this.props.feeds.map((feed) => (
-          <AppletPreview key={feed.id} data={feed} />
+          <AppletPreview key={feed.id} feed={feed} />
         ))}
       </ScrollView>
     );

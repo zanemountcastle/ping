@@ -1,45 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`my applets screen renders correctly 1`] = `
-<View>
-  <AppletsHeader />
-  <AppletsFeed
-    feeds={
-      Array [
-        Object {
-          "color": "#03C7F5",
-          "id": "111",
-          "lastActive": "one minute ago",
-          "organization": "NYUAD",
-          "status": "On",
-          "title": "There's food in the Baraha.",
-        },
-        Object {
-          "color": "#A327FD",
-          "id": "112",
-          "lastActive": "three days ago",
-          "organization": "The Gazelle",
-          "status": "Off",
-          "title": "A new issue of The Gazelle is released.",
-        },
-        Object {
-          "color": "#40403F",
-          "id": "113",
-          "lastActive": "four hours ago",
-          "organization": "ResEd",
-          "status": "On",
-          "title": "The A6 hammock is free.",
-        },
-        Object {
-          "color": "#40403F",
-          "id": "114",
-          "lastActive": "one minute ago",
-          "organization": "Saints",
-          "status": "On",
-          "title": "The Saints score a touchdown.",
-        },
-      ]
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "center",
     }
-  />
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    loading...
+  </Text>
 </View>
 `;

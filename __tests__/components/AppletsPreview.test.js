@@ -7,12 +7,12 @@ import renderer from 'react-test-renderer';
 describe('applet preview', () => {
 
   it('renders without crashing', () => {
-    const rendered = renderer.create(<AppletPreview data={feeds[0]} />).toJSON();
+    const rendered = renderer.create(<AppletPreview feed={feeds[0]} />).toJSON();
     expect(rendered).toBeTruthy();
   });
 
   it('renders correctly', () => {
-    const tree = renderer.create(<AppletPreview data={feeds[0]} />).toJSON();
+    const tree = renderer.create(<AppletPreview feed={feeds[0]} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

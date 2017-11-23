@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default class AppletPreview extends Component {
   componentWillMount() {
-    styles.preview.backgroundColor = this.props.data.color;
+    styles.preview.backgroundColor = this.props.feed.color;
   };
 
   render() {
@@ -12,11 +12,11 @@ export default class AppletPreview extends Component {
         <View style={styles.body}>
           <Text style={styles.pingMeWhen}>Ping me when</Text>
           <View style={styles.divider} />
-          <Text style={styles.titleText}>{this.props.data.title}</Text>
+          <Text style={styles.titleText}>{this.props.feed.title}</Text>
         </View>
         <View style={styles.footer}>
-          <Text style={styles.status}>{this.props.data.status}</Text>
-          <Text style={styles.lastActive}>{this.props.data.lastActive}</Text>
+          <Text style={styles.status}>{this.props.feed.status}</Text>
+          <Text style={styles.lastActive}>{this.props.feed.lastActive}</Text>
         </View>
       </View>
     );
