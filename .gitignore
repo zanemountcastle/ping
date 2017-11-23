@@ -1,4 +1,5 @@
 coverage/
 node_modules/
 .expo/
+.idea/
 npm-debug.*
