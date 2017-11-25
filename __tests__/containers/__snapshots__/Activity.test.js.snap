@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`activity screen renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <Header
+    centerComponent={
+      Object {
+        "style": Object {
+          "color": "#4D4C4C",
+          "fontSize": 20,
+          "fontWeight": "700",
+        },
+        "text": "Activity",
+      }
+    }
+    outerContainerStyles={
+      Object {
+        "backgroundColor": "#fff",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+    >
+      Activity page!
+    </Text>
+  </View>
+</View>
+`;
