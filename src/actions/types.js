@@ -1,0 +1,1 @@
+export const SET_SEARCHED_PINGS = 'SET_SEARCHED_PINGS';

@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Header } from 'react-native-elements';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, combineRuduxers, compose } from 'redux';
-import thunkMiddlware from 'redux-thunk';
-import createLogger from 'redux-logger';
 
 import AppletsFeed from '../components/AppletsFeed';
 
