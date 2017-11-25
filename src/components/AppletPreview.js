@@ -2,17 +2,28 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class AppletPreview extends Component {
-  componentWillMount() {
-    styles.preview.backgroundColor = this.props.feed.color;
-  };
+
+  // Dynamically sets the background color of the previews
+  bodyStyle = () => {
+    return {
+      backgroundColor: this.props.feed.color,
+      borderRadius: 10,
+      marginLeft: 10,
+      marginRight: 10,
+      marginTop: 20,
+      flexDirection: "column",
+      minHeight: 200,
+    };
+  }
 
   render() {
     return (
-      <View style={styles.preview}>
+      <View style={this.bodyStyle()}>
         <View style={styles.body}>
           <Text style={styles.pingMeWhen}>Ping me when</Text>
           <View style={styles.divider} />
           <Text style={styles.titleText}>{this.props.feed.title}</Text>
+          <Text style={styles.organization}>by {this.props.feed.organization}</Text>
         </View>
         <View style={styles.footer}>
           <Text style={styles.status}>{this.props.feed.status}</Text>
@@ -24,15 +35,6 @@ export default class AppletPreview extends Component {
 }
 
 let styles = StyleSheet.create({
-  preview: {
-    backgroundColor: "steelblue",
-    borderRadius: 10,
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 20,
-    flexDirection: "column",
-    minHeight: 190,
-  },
   body: {
     padding: 20,
   },
@@ -54,6 +56,12 @@ let styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "700",
   },
+  organization: {
+    marginTop: 7,
+    color: "rgba(255,255,255,0.8)",
+    fontSize: 12,
+    fontWeight: "700",
+  },
   footer: {
     zIndex: 1, // Above rest of preview
     height: 30,
@@ -72,11 +80,11 @@ let styles = StyleSheet.create({
     paddingRight: 20,
   },
   status: {
-    color: "#999",
+    color: "rgba(255,255,255,0.5)",
     fontWeight: "700",
   },
   lastActive: {
-    color: "#999",
+    color: "rgba(255,255,255,0.5)",
     fontWeight: "700",
   },
 });
