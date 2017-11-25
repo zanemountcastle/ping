@@ -1,5 +1,5 @@
 import React from 'react';
-import Activity from '../../src/screens/Activity';
+import Activity from '../../src/containers/Activity';
 
 import ShallowRenderer from 'react-test-renderer/shallow';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getFeeds } from '../../src/utilities/Fetch';
+import { getFeeds } from '../../src/lib/Fetch';
 
 describe('utilities', () => {
 

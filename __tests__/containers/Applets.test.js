@@ -1,5 +1,5 @@
 import React from 'react';
-import Applets from '../../src/screens/Applets';
+import Applets from '../../src/containers/Applets';
 
 import ShallowRenderer from 'react-test-renderer/shallow';
 

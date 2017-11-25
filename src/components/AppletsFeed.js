@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
-import { getFeeds } from '../utilities/Fetch';
+import { getFeeds } from '../lib/Fetch';
 
 import AppletPreview from './AppletPreview';
 

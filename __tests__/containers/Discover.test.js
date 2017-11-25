@@ -1,5 +1,5 @@
 import React from 'react';
-import Discover from '../../src/screens/Discover';
+import Discover from '../../src/containers/Discover';
 
 import ShallowRenderer from 'react-test-renderer/shallow';
 

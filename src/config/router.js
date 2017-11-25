@@ -2,10 +2,10 @@ import React from 'react';
 import { TabNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
-import Activity from '../screens/Activity';
-import Applets from '../screens/Applets';
-import Discover from '../screens/Discover';
-import Search from '../screens/Search';
+import Activity from '../containers/Activity';
+import Applets from '../containers/Applets';
+import Discover from '../containers/Discover';
+import Search from '../containers/Search';
 
 export const Tabs = TabNavigator({
   Discover: {
