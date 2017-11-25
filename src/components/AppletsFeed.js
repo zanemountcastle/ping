@@ -1,22 +1,56 @@
 import React, { Component } from 'react';
 import {
   ActivityIndicator,
+  RefreshControl,
+  ScrollView,
+  StyleSheet,
   Text,
   View,
-  ScrollView,
-  StyleSheet
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
+
+import { getFeeds } from '../utilities/Fetch';
 
 import AppletPreview from './AppletPreview';
 
 export default class AppletsFeed extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      feeds: [],
+      refreshing: false,
+    };
+  }
+
+  componentWillMount() {
+    getFeeds().then((feeds) => { // Set feeds when the come in
+      this.setState({feeds: feeds})
+    });
+  }
+
+  _onRefresh() {
+    this.setState({refreshing: true});
+    getFeeds().then((feeds) => {
+      this.setState({
+        refreshing: false,
+        feeds: feeds,
+      });
+    });
+  }
+
   render() {
-    if (this.props.feeds.length != 0) {
+    if (this.state.feeds.length != 0) {
       return (
-        <ScrollView style={styles.container}>
-          {this.props.feeds.map((feed) => (
+        <ScrollView
+          contentInset={{bottom: 20}}
+          refreshControl={
+            <RefreshControl
+              refreshing={this.state.refreshing}
+              onRefresh={this._onRefresh.bind(this)}
+            />
+          }>
+          {this.state.feeds.map((feed) => (
             <AppletPreview key={feed.id} feed={feed} />
           ))}
         </ScrollView>
@@ -32,10 +66,6 @@ export default class AppletsFeed extends Component {
 }
 
 let styles = StyleSheet.create({
-  container: {
-    // marginBottom: 70,
-    // paddingBottom: 50,
-  },
   loading: {
     flex: 1,
     backgroundColor: '#fff',
