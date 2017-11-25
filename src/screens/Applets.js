@@ -23,27 +23,20 @@ export default class Applets extends Component {
   }
 
   render() {
-    if (this.state.feeds.length != 0) { // There are feeds to show!
       return (
-        <View >
+        <View style={styles.container}>
           <AppletsHeader />
           <AppletsFeed feeds={this.state.feeds} />
         </View>
       );
-    } else { // Waiting for feeds data to arrive
-      return (
-        <View style={styles.container}>
-          <Text>loading...</Text>
-        </View>
-      );
     }
-  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
   },
