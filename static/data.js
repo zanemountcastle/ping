@@ -38,5 +38,13 @@ export const feeds = [
     "color": "#40403F",
     "status": "On",
     "lastActive": "one minute ago",
+  },
+  {
+    "id": "116",
+    "title": "This is a really really really long title. This applet is used to test how very long titles are rendered.",
+    "organization": "Zane Mountcastle",
+    "color": "#F58026",
+    "status": "On",
+    "lastActive": "two months ago",
   }
 ];
