@@ -4,20 +4,48 @@ exports[`discover screen renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
-      "justifyContent": "center",
+      "flexDirection": "column",
     }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
+  <Header
+    centerComponent={
+      Object {
+        "style": Object {
+          "color": "#4D4C4C",
+          "fontSize": 20,
+          "fontWeight": "700",
+        },
+        "text": "Discover",
+      }
+    }
+    outerContainerStyles={
+      Object {
+        "backgroundColor": "#fff",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      }
+    }
   >
-    Discover page!
-  </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+    >
+      Discover page!
+    </Text>
+  </View>
 </View>
 `;

@@ -7,17 +7,40 @@ exports[`my applets screen renders correctly 1`] = `
       "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
+      "flexDirection": "column",
       "justifyContent": "center",
     }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-  >
-    loading...
-  </Text>
+  <Header
+    centerComponent={
+      Object {
+        "style": Object {
+          "color": "#4D4C4C",
+          "fontSize": 20,
+          "fontWeight": "700",
+        },
+        "text": "My Applets",
+      }
+    }
+    leftComponent={
+      Object {
+        "color": "#4D4C4C",
+        "icon": "settings",
+      }
+    }
+    outerContainerStyles={
+      Object {
+        "backgroundColor": "#fff",
+      }
+    }
+    rightComponent={
+      Object {
+        "color": "#4D4C4C",
+        "icon": "add",
+      }
+    }
+  />
+  <AppletsFeed />
 </View>
 `;
