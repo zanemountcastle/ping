@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Header } from 'react-native-elements';
-
-import AppletsFeed from '../components/AppletsFeed';
+import { AppletsFeed } from '../components';
+// import AppletsFeed from '../components/AppletsFeed';
 
 export default class Applets extends Component {
 

@@ -23,18 +23,12 @@ function configureStore(intitialState) {
 
 const store = configureStore({});
 
-class Ping extends React.Component {
+export default class Ping extends React.Component {
   render() {
     return (
-      <Tabs />
+      <Provider store={store}>
+        <Tabs />
+      </Provider>
     );
   }
 }
-
-const App = () => (
-  <Provider store={store}>
-    <Ping />
-  </Provider>
-);
-
-AppRegistry.registerComponent('Ping', () => App);
