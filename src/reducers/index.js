@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import CryptoReducer from './CryptoReducer';
+import AppletReducer from './AppletReducer';
 
 export default combineReducers({
-    crypto: CryptoReducer
+    applets: AppletReducer
 });

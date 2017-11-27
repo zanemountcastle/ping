@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Tabs } from './src/config/router';
+import { Tabs } from './src/lib/Router';
 import { AppLoading } from 'expo';
 
 import { Provider } from 'react-redux';

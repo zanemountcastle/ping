@@ -6,7 +6,7 @@ export default class AppletPreview extends Component {
   // Dynamically sets the background color of the previews
   bodyStyle = () => {
     return {
-      backgroundColor: this.props.feed.color,
+      backgroundColor: this.props.applet.color,
       borderRadius: 10,
       marginLeft: 10,
       marginRight: 10,
@@ -22,12 +22,12 @@ export default class AppletPreview extends Component {
         <View style={styles.body}>
           <Text style={styles.pingMeWhen}>Ping me when</Text>
           <View style={styles.divider} />
-          <Text style={styles.titleText}>{this.props.feed.title}</Text>
-          <Text style={styles.byLine}>by {this.props.feed.organization}</Text>
+          <Text style={styles.titleText}>{this.props.applet.title}</Text>
+          <Text style={styles.byLine}>by {this.props.applet.organization}</Text>
         </View>
         <View style={styles.footer}>
-          <Text style={styles.status}>{this.props.feed.status}</Text>
-          <Text style={styles.lastActive}>{this.props.feed.lastActive}</Text>
+          <Text style={styles.status}>{this.props.applet.status}</Text>
+          <Text style={styles.lastActive}>{this.props.applet.lastActive}</Text>
         </View>
       </View>
     );

@@ -1,29 +1,28 @@
 import axios from 'axios';
-import { apiBaseURL } from './../utils/Constants';
 import {
-    FETCHING_COIN_DATA,
-    FETCHING_COIN_DATA_SUCCESS,
-    FETCHING_COIN_DATA_FAIL,
-} from './../utils/ActionTypes';
+    FETCHING_APPLET_DATA,
+    FETCHING_APPLET_DATA_SUCCESS,
+    FETCHING_APPLET_DATA_FAIL,
+} from './ActionTypes';
 import { getFeeds } from '../lib/Fetch';
 
-export default function FetchCoinData() {
+export default function FetchAppletData() {
   return dispatch => {
 
     dispatch({
-      type: FETCHING_COIN_DATA
+      type: FETCHING_APPLET_DATA
     })
 
     return getFeeds()
       .then(feeds => {
         return dispatch({
-          type: FETCHING_COIN_DATA_SUCCESS,
+          type: FETCHING_APPLET_DATA_SUCCESS,
           payload: feeds
         });
       })
       .catch(err => {
         return dispatch({
-          type: FETCHING_COIN_DATA_FAIL,
+          type: FETCHING_APPLET_DATA_FAIL,
           payload: err
         });
       });
