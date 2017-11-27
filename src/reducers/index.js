@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import * as pingsReducer from './pings';
+import CryptoReducer from './CryptoReducer';
 
-export default combineReducers(Object.assign(
-  pingsReducer,
-));
+export default combineReducers({
+    crypto: CryptoReducer
+});

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Header } from 'react-native-elements';
+import CryptoContainer from '../components/CryptoContainer';
 
 export default class Discover extends Component {
 
@@ -12,7 +13,7 @@ export default class Discover extends Component {
             outerContainerStyles={{ backgroundColor: '#fff' }}
           />
           <View style={styles.body}>
-            <Text>Discover page!</Text>
+            <CryptoContainer />
           </View>
         </View>
       );
