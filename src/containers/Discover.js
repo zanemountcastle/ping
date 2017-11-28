@@ -6,9 +6,7 @@ import { Header } from 'react-native-elements';
 //import { ExpoLinksView } from '@expo/samples';
 import { List, ListItem, Button } from 'react-native-elements';
 import * as firebase from 'firebase';
-import {
-  Notifications,
-} from 'expo';
+import {Notifications} from 'expo';
 
 import registerForPushNotificationsAsync from '../../api/registerForPushNotificationsAsync';
 export default class Discover extends Component {
