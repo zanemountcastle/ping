@@ -75,7 +75,6 @@ export default class login extends React.Component {
                 />
                 <Text>{this.state.error}</Text>
                 {this.renderButtonOrLoading()}
-
             </View>
 
         )
