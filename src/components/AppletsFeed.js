@@ -8,13 +8,10 @@ import {
   View,
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
-import { connect } from 'react-redux';
 
 import AppletPreview from './AppletPreview';
 
-import FetchAppletData from '../actions/FetchAppletData';
-
-class AppletsFeed extends Component {
+export default class AppletsFeed extends Component {
 
   constructor(props) {
     super(props);
@@ -23,14 +20,9 @@ class AppletsFeed extends Component {
     }
   }
 
-  // Request data when component first mounts
-  componentWillMount() {
-    this.props.FetchAppletData();
-  }
-
   // Called when new data comes in
   componentWillReceiveProps(nextProps) {
-    if (!nextProps.applets.isFetching) {
+    if (!nextProps.isFetching) {
       // Remove pull-to-refresh loading animation
       this.setState({ isRefreshing: false });
     }
@@ -39,11 +31,11 @@ class AppletsFeed extends Component {
   // Called on pull-to-refresh action
   _onRefresh() {
     this.setState({ isRefreshing: true });
-    this.props.FetchAppletData();
+    this.props.fetchApplets();
   }
 
   render() {
-    if (!this.props.applets.isFetching || this.state.isRefreshing ) {
+    if (!this.props.isFetching || this.state.isRefreshing ) {
       return (
         <ScrollView
           contentInset={{bottom: 20}}
@@ -53,7 +45,7 @@ class AppletsFeed extends Component {
               onRefresh={this._onRefresh.bind(this)}
             />
           }>
-          {this.props.applets.data.map((applet) => (
+          {this.props.feed.map((applet) => (
             <AppletPreview key={applet.id} applet={applet} />
           ))}
         </ScrollView>
@@ -76,12 +68,3 @@ let styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-
-function mapStateToProps(state) {
-  return {
-    applets: state.applets
-  }
-}
-
-export default connect(mapStateToProps, { FetchAppletData })(AppletsFeed)
