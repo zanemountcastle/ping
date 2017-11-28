@@ -9,6 +9,15 @@ import Store from './src/lib/Store';
 
 import * as firebase from 'firebase';
 
+firebase.initializeApp({
+  apiKey: "AIzaSyBZGYJUNo7DuYgSUhCZ3S58zM0gO7fcYrY",
+  authDomain: "ping-fdb36.firebaseapp.com",
+  databaseURL: "https://ping-fdb36.firebaseio.com",
+  projectId: "ping-fdb36",
+  storageBucket: "ping-fdb36.appspot.com",
+  messagingSenderId: "944163924283"
+});
+
 
 export default class Ping extends React.Component {
 

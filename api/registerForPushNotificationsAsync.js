@@ -1,15 +1,6 @@
 import { Permissions, Notifications } from 'expo';
 import * as firebase from 'firebase';
 
-firebase.initializeApp({
-  apiKey: "AIzaSyBZGYJUNo7DuYgSUhCZ3S58zM0gO7fcYrY",
-  authDomain: "ping-fdb36.firebaseapp.com",
-  databaseURL: "https://ping-fdb36.firebaseio.com",
-  projectId: "ping-fdb36",
-  storageBucket: "ping-fdb36.appspot.com",
-  messagingSenderId: "944163924283"
-});
-
 
 export default (async function registerForPushNotificationsAsync() {
   // Android remote notification permissions are granted during the app
@@ -27,19 +18,28 @@ export default (async function registerForPushNotificationsAsync() {
 
   firebase.database().ref('/users/' + userID).update({ token: token });
 
+  refreshedToken = FirebaseInstanceId.getInstance().getToken();
+  Log.d(TAG, "Refreshed token: " + refreshedToken);
 
+// If you want to send messages to this application instance or
+// manage this apps subscriptions on the server side, send the
+// Instance ID token to your app server.
+  sendRegistrationToServer(refreshedToken);
 
-  // // POST the token to our backend so we can use it to send pushes from there
-  // return fetch(PUSH_ENDPOINT, {
-  //   method: 'POST',
-  //   headers: {
-  //     Accept: 'application/json',
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify({
-  //     token: {
-  //       value: token,
-  //     },
-  //   }),
-  // });
+   // POST the token to our backend so we can use it to send pushes from there
+   return fetch(PUSH_ENDPOINT, {
+     method: 'POST',
+     headers: {
+       Accept: 'application/json',
+       'Content-Type': 'application/json',
+     },
+     body: JSON.stringify({
+       token: {
+         value: token,
+       },
+       user: {
+        username: 'Cristiano',
+      },
+     }),
+   });
 });
