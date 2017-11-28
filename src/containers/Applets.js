@@ -7,7 +7,7 @@ import { AppletsFeed } from '../components';
 
 import FetchAppletData from '../actions/FetchAppletData';
 
-class Applets extends Component {
+export class Applets extends Component {
 
   // Request data when component first mounts
   componentWillMount() {

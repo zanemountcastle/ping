@@ -4,11 +4,9 @@ exports[`my applets screen renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
       "flexDirection": "column",
-      "justifyContent": "center",
     }
   }
 >
@@ -23,24 +21,16 @@ exports[`my applets screen renders correctly 1`] = `
         "text": "My Applets",
       }
     }
-    leftComponent={
-      Object {
-        "color": "#4D4C4C",
-        "icon": "settings",
-      }
-    }
     outerContainerStyles={
       Object {
         "backgroundColor": "#fff",
       }
     }
-    rightComponent={
-      Object {
-        "color": "#4D4C4C",
-        "icon": "add",
-      }
-    }
   />
-  <AppletsFeed />
+  <AppletsFeed
+    feed={Array []}
+    fetchApplets={[Function]}
+    isFetching={false}
+  />
 </View>
 `;
