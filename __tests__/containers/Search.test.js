@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from '../../src/screens/Search';
+import Search from '../../src/containers/Search';
 
 import ShallowRenderer from 'react-test-renderer/shallow';
 

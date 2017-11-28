@@ -1,12 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Tabs } from './src/config/router';
+import { Tabs } from './src/lib/Router';
 import { AppLoading } from 'expo';
 
-export default class App extends React.Component {
+import { Provider } from 'react-redux';
+import Store from './src/lib/Store';
+
+export default class Ping extends React.Component {
   render() {
     return (
-      <Tabs />
+      <Provider store={Store}>
+        <Tabs />
+      </Provider>
     );
   }
 }

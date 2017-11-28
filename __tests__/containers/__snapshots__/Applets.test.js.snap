@@ -4,20 +4,33 @@ exports[`my applets screen renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
       "backgroundColor": "#fff",
       "flex": 1,
-      "justifyContent": "center",
+      "flexDirection": "column",
     }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-  >
-    loading...
-  </Text>
+  <Header
+    centerComponent={
+      Object {
+        "style": Object {
+          "color": "#4D4C4C",
+          "fontSize": 20,
+          "fontWeight": "700",
+        },
+        "text": "My Applets",
+      }
+    }
+    outerContainerStyles={
+      Object {
+        "backgroundColor": "#fff",
+      }
+    }
+  />
+  <AppletsFeed
+    feed={Array []}
+    fetchApplets={[Function]}
+    isFetching={false}
+  />
 </View>
 `;

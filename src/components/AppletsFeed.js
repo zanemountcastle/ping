@@ -9,8 +9,6 @@ import {
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 
-import { getFeeds } from '../utilities/Fetch';
-
 import AppletPreview from './AppletPreview';
 
 export default class AppletsFeed extends Component {
@@ -18,40 +16,37 @@ export default class AppletsFeed extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      feeds: [],
-      refreshing: false,
-    };
+      isRefreshing: false,
+    }
   }
 
-  componentWillMount() {
-    getFeeds().then((feeds) => { // Set feeds when the come in
-      this.setState({feeds: feeds})
-    });
+  // Called when new data comes in
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.isFetching) {
+      // Remove pull-to-refresh loading animation
+      this.setState({ isRefreshing: false });
+    }
   }
 
+  // Called on pull-to-refresh action
   _onRefresh() {
-    this.setState({refreshing: true});
-    getFeeds().then((feeds) => {
-      this.setState({
-        refreshing: false,
-        feeds: feeds,
-      });
-    });
+    this.setState({ isRefreshing: true });
+    this.props.fetchApplets();
   }
 
   render() {
-    if (this.state.feeds.length != 0) {
+    if (!this.props.isFetching || this.state.isRefreshing ) {
       return (
         <ScrollView
           contentInset={{bottom: 20}}
           refreshControl={
             <RefreshControl
-              refreshing={this.state.refreshing}
+              refreshing={this.state.isRefreshing}
               onRefresh={this._onRefresh.bind(this)}
             />
           }>
-          {this.state.feeds.map((feed) => (
-            <AppletPreview key={feed.id} feed={feed} />
+          {this.props.feed.map((applet) => (
+            <AppletPreview key={applet.id} applet={applet} />
           ))}
         </ScrollView>
       );

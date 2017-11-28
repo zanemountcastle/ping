@@ -2,9 +2,7 @@ import React from 'react';
 import { TabNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
-import Discover from '../screens/Discover';
-import Applets from '../screens/Applets';
-import Search from '../screens/Search';
+import { Activity, Applets, Discover, Search } from '../containers';
 
 export const Tabs = TabNavigator({
   Discover: {
@@ -14,11 +12,18 @@ export const Tabs = TabNavigator({
       tabBarIcon: ({ tintColor }) => <Icon name="remove-red-eye" size={30} color={tintColor}/>
     },
   },
+  Activity: {
+    screen: Activity,
+    navigationOptions: {
+      tabBarLabel: 'Activity',
+      tabBarIcon: ({ tintColor }) => <Icon name="subject" size={30} color={tintColor}/>
+    },
+  },
   MyApplets: {
     screen: Applets,
     navigationOptions: {
       tabBarLabel: 'My Applets',
-      tabBarIcon: ({ tintColor }) => <Icon name="home" size={30} color={tintColor}/>
+      tabBarIcon: ({ tintColor }) => <Icon name="notifications-none" size={30} color={tintColor}/>
     },
   },
   Search: {
