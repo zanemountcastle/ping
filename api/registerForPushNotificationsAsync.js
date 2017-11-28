@@ -1,6 +1,6 @@
 import { Permissions, Notifications } from 'expo';
 import * as firebase from 'firebase';
-/*
+
 firebase.initializeApp({
   apiKey: "AIzaSyBZGYJUNo7DuYgSUhCZ3S58zM0gO7fcYrY",
   authDomain: "ping-fdb36.firebaseapp.com",
@@ -9,7 +9,7 @@ firebase.initializeApp({
   storageBucket: "ping-fdb36.appspot.com",
   messagingSenderId: "944163924283"
 });
-*/
+
 
 export default (async function registerForPushNotificationsAsync() {
   // Android remote notification permissions are granted during the app
@@ -22,8 +22,6 @@ export default (async function registerForPushNotificationsAsync() {
   }
   // Get the token that uniquely identifies this device
   let token = await Notifications.getExpoPushTokenAsync();
-
-
 
   userID = firebase.auth().currentUser.uid;
 
