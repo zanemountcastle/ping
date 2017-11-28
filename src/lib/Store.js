@@ -9,7 +9,7 @@ import promise from 'redux-promise';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
-import RootReducer from './reducers';
+import RootReducer from '../reducers';
 
 const middleware = applyMiddleware(promise, thunk);
 

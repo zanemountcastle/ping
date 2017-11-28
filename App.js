@@ -4,7 +4,7 @@ import { Tabs } from './src/lib/Router';
 import { AppLoading } from 'expo';
 
 import { Provider } from 'react-redux';
-import Store from './src/Store';
+import Store from './src/lib/Store';
 
 export default class Ping extends React.Component {
   render() {
