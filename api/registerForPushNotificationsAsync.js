@@ -1,6 +1,8 @@
 import { Permissions, Notifications } from 'expo';
 import * as firebase from 'firebase';
 
+const PUSH_ENDPOINT = 'https://ping-fdb36.firebaseio.com/users/';
+
 
 export default (async function registerForPushNotificationsAsync() {
   // Android remote notification permissions are granted during the app
@@ -18,15 +20,10 @@ export default (async function registerForPushNotificationsAsync() {
 
   firebase.database().ref('/users/' + userID).update({ token: token });
 
-  refreshedToken = FirebaseInstanceId.getInstance().getToken();
-  Log.d(TAG, "Refreshed token: " + refreshedToken);
 
-// If you want to send messages to this application instance or
-// manage this apps subscriptions on the server side, send the
-// Instance ID token to your app server.
-  sendRegistrationToServer(refreshedToken);
 
    // POST the token to our backend so we can use it to send pushes from there
+   // This code is not doing much (nothing)for us now
    return fetch(PUSH_ENDPOINT, {
      method: 'POST',
      headers: {

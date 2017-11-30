@@ -10,9 +10,8 @@ import {Notifications} from 'expo';
 
 import registerForPushNotificationsAsync from '../../api/registerForPushNotificationsAsync';
 export default class Discover extends Component {
-
     state = {
-      notification: {},
+      notification: {data:[]},
     };
 
     componentWillMount() {
@@ -32,9 +31,16 @@ export default class Discover extends Component {
 
     render() {
       return (
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text>Origin: {this.state.notification.origin}</Text>
-          <Text>Data: {JSON.stringify(this.state.notification.data)}</Text>
+        <View style={styles.container}>
+          <Header
+            centerComponent={{ text: 'Discover', style: { color: '#4D4C4C', fontSize: 20, fontWeight: '700' } }}
+            outerContainerStyles={{ backgroundColor: '#fff' }}
+          />
+          <View style={styles.body}>
+            <Text>Origin: {this.state.notification.origin}</Text>
+            {console.log(this.state.notification)}
+            <Text>Data: {this.state.notification.data.feed}</Text>
+          </View>
         </View>
       );
     }
@@ -54,7 +60,7 @@ export default class Discover extends Component {
       );
     }
 }
-
+*/
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -69,4 +75,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-*/

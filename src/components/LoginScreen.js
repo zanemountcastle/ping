@@ -7,7 +7,8 @@ import { FormLabel, FormInput } from 'react-native-elements'
 export default class login extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { email: 'Test@test.com', password: '123456', error: '', loading: false };
+        this.state = { email: 'Test@test.com', password: '111111', error: '', loading: false };
+        {console.ignoredYellowBox = ['Setting a timer']}
     }
     onLoginPress() {
 
