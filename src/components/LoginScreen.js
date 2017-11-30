@@ -4,6 +4,8 @@ import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 import { FormLabel, FormInput } from 'react-native-elements'
 
+import { registerForPushNotificationsAsync } from '../lib/Utilities'
+
 export default class login extends React.Component {
     constructor(props) {
         super(props);
@@ -11,19 +13,17 @@ export default class login extends React.Component {
         {console.ignoredYellowBox = ['Setting a timer']}
     }
     onLoginPress() {
-
         this.setState({ error: '', loading: true });
 
         const { email, password } = this.state;
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(() => {
                 this.setState({ error: '', loading: false });
+                registerForPushNotificationsAsync();
                 this.props.navigation.navigate('Main');
-
             })
             .catch(() => {
                 this.setState({ error: 'Authentication failed', loading: false });
-
             })
 
     }
@@ -34,6 +34,7 @@ export default class login extends React.Component {
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .then(() => {
                 this.setState({ error: '', loading: false });
+                registerForPushNotificationsAsync();
                 this.props.navigation.navigate('Main');
 
             })
@@ -81,6 +82,5 @@ export default class login extends React.Component {
         )
 
     }
-
 
 }
