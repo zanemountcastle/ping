@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {
     FETCHING_APPLET_DATA,
     FETCHING_APPLET_DATA_SUCCESS,
