@@ -4,7 +4,7 @@ import * as firebase from 'firebase';
 const PUSH_ENDPOINT = 'https://ping-fdb36.firebaseio.com/users/';
 
 
-export default (async function registerForPushNotificationsAsync() {
+export async function registerForPushNotificationsAsync() {
   // Android remote notification permissions are granted during the app
   // install, so this will only ask on iOS
   let { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
@@ -36,4 +36,4 @@ export default (async function registerForPushNotificationsAsync() {
        },
      }),
    });
-});
+};

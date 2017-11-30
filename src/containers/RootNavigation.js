@@ -2,14 +2,13 @@ import { Notifications } from 'expo';
 import React from 'react';
 import { View, Button, Text } from 'react-native'
 import { StackNavigator } from 'react-navigation';
-import Login from '../components/LoginScreen';
-import registerForPushNotificationsAsync from '../../api/registerForPushNotificationsAsync';
+import { LoginScreen } from '../components';
 import { Tabs } from '../lib/Router';
 
 const RootStackNavigator = StackNavigator(
   {
     Login:{
-      screen: Login
+      screen: LoginScreen,
 
     },
     Main: {
@@ -18,11 +17,7 @@ const RootStackNavigator = StackNavigator(
 
   },
   {
-    navigationOptions: () => ({
-      headerTitleStyle: {
-        fontWeight: 'normal',
-      },
-    }),
+    headerMode: 'none',
   }
 );
 
