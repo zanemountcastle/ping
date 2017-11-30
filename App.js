@@ -9,7 +9,6 @@ import {Notifications} from 'expo';
 import { Provider } from 'react-redux';
 import Store from './src/lib/Store';
 
-import { registerForPushNotificationsAsync } from './src/lib/Utilities';
 
 firebase.initializeApp({
   apiKey: "AIzaSyBZGYJUNo7DuYgSUhCZ3S58zM0gO7fcYrY",
@@ -21,10 +20,6 @@ firebase.initializeApp({
 });
 
 export default class Ping extends React.Component {
-
-  componentWillMount() {
-    registerForPushNotificationsAsync();
-  }
 
   render() {
     return (
