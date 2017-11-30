@@ -1,86 +1,144 @@
 import React from 'react';
-import { View, Button, Text } from 'react-native'
+import {
+  ActivityIndicator,
+  Image,
+  Text,
+  TextInput,
+  StyleSheet,
+  View } from 'react-native';
 import * as firebase from 'firebase';
-import { StackNavigator } from 'react-navigation';
-import { FormLabel, FormInput } from 'react-native-elements'
+import {StackNavigator} from 'react-navigation';
+import {Button, FormLabel, FormInput} from 'react-native-elements'
 
 export default class login extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { email: 'Test@test.com', password: '111111', error: '', loading: false };
-        {console.ignoredYellowBox = ['Setting a timer']}
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: null,
+      password: null,
+      error: null,
+      loading: false
+    };
+    {
+      console.ignoredYellowBox = ['Setting a timer']
     }
-    onLoginPress() {
+  }
 
-        this.setState({ error: '', loading: true });
+  _onLoginPress() {
+    this.setState({error: '', loading: true});
 
-        const { email, password } = this.state;
-        firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(() => {
-                this.setState({ error: '', loading: false });
-                this.props.navigation.navigate('Main');
+    const {email, password} = this.state;
+    firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
+      this.setState({error: '', loading: false});
+      this.props.navigation.navigate('Main');
 
-            })
-            .catch(() => {
-                this.setState({ error: 'Authentication failed', loading: false });
+    }).catch(() => {
+      this.setState({error: 'Authentication failed', loading: false});
+    });
+  }
 
-            })
+  _onSignUpPress() {
+    this.setState({error: '', loading: true});
+    const {email, password} = this.state;
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
+      this.setState({error: '', loading: false});
+      this.props.navigation.navigate('Main');
 
-    }
+    }).catch(() => {
+      this.setState({error: 'Authentication failed', loading: false});
+    })
+  }
 
-    onSignUpPress() {
-        this.setState({ error: '', loading: true });
-        const { email, password } = this.state;
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then(() => {
-                this.setState({ error: '', loading: false });
-                this.props.navigation.navigate('Main');
+  render() {
+    return (
+      <View style={styles.container}>
+        <Image
+          style={styles.logo}
+          source={require('../../static/assets/logo.png')}
+        />
+        <View style={styles.form}>
+          <Text style={styles.formHeader}>email</Text>
+          <TextInput
+            value={this.state.email}
+            onChangeText={email => this.setState({email})}
+            placeholder='john@icloud.com'
+            style={styles.textInput}/>
 
-            })
-            .catch(() => {
-                this.setState({ error: 'Authentication failed', loading: false });
-
-            })
-    }
-
-    renderButtonOrLoading() {
-        if (this.state.loading) {
-            return <Text> Loading </Text>
-        }
-        return <View>
-            <Button
-                onPress={this.onLoginPress.bind(this)}
-                title='Login'/>
-            <Button
-                onPress={this.onSignUpPress.bind(this)}
-                title='Sign up'/>
-
+          <Text style={styles.formHeader}>password</Text>
+          <TextInput
+            value={this.state.password}
+            secureTextEntry
+            placeholder='••••••••••'
+            onChangeText={password => this.setState({password})}
+            style={styles.textInput}
+          />
+          <Text>{this.state.error}</Text>
         </View>
 
-    }
-    render() {
-        return (
-            <View>
-                <FormLabel>Email</FormLabel>
-                <FormInput
-                 value = {this.state.email}
-                 onChangeText={email => this.setState({ email })}
-                 placeholder='john@icloud.com'
-                 />
-                <FormLabel>Password</FormLabel>
-                <FormInput
-                value = {this.state.password}
-                secureTextEntry
-                placeholder='*******'
-                onChangeText={password => this.setState({ password })}
-                />
-                <Text>{this.state.error}</Text>
-                {this.renderButtonOrLoading()}
-            </View>
+        <Button
+          onPress={this._onLoginPress.bind(this)}
+          title='log in'
+          buttonStyle={styles.login}
+          color={'#000'}
+          loading={this.state.loading}
+          disabled={this.state.loading}
+        />
 
-        )
-
-    }
-
+        <Button
+          onPress={this._onSignUpPress.bind(this)}
+          title="sign up"
+          color="#FFF"
+          loading={this.state.loading}
+          disabled={this.state.loading}
+          buttonStyle={styles.signup}
+        />
+      </View>
+    )
+  }
 
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FF7C7C',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  login: {
+    backgroundColor: '#FFF',
+    marginTop: 40,
+    marginBottom: 5,
+    alignSelf: 'center',
+    width: 250,
+    borderRadius: 5,
+  },
+  signup: {
+    backgroundColor: 'transparent',
+  },
+  textInput: {
+    width: 250,
+    height: 120,
+    borderRadius: 5,
+    backgroundColor: '#FFF',
+    alignSelf: 'center',
+    height: 40,
+    paddingLeft: 20,
+  },
+  formHeader: {
+    marginTop: 20,
+    color: '#FFF',
+    fontWeight: '700',
+    marginBottom: 2,
+  },
+  form: {
+    alignSelf: 'center',
+    width: 250,
+  },
+  logo: {
+    width: 120,
+    height: 120,
+    alignSelf: 'center',
+    marginBottom: 20,
+  }
+});
