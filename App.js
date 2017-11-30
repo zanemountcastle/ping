@@ -24,8 +24,6 @@ export default class Ping extends React.Component {
 
   componentWillMount() {
     registerForPushNotificationsAsync();
-
-    this._notificationSubscription = Notifications.addListener(this._handleNotification);
   }
 
   render() {
