@@ -1,0 +1,45 @@
+[
+    {
+        "outputFile": "/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-km/values-km.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 207,
+                    "endOffset": 308
+                },
+                "from": {
+                    "file": "/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.2/res/values-km/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 207,
+                        "endOffset": 492
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 313,
+                    "endColumn": 104,
+                    "endOffset": 413
+                },
+                "from": {
+                    "file": "/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.2/res/values-km/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 243,
+                        "endColumn": 100,
+                        "endOffset": 343
+                    }
+                }
+            }
+        ]
+    }
+]

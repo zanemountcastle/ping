@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "635977820495",
+    "firebase_url": "https://ping-fdb36.firebaseio.com",
+    "project_id": "ping-fdb36",
+    "storage_bucket": "ping-fdb36.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635977820495:android:4b6b74714f52fb73",
+        "android_client_info": {
+          "package_name": "com.ping.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635977820495-pdtrnqtde3njblat2at496dmtt5k8ip4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ping.android",
+            "certificate_hash": "60d3b8735e0ddff050e1aabe1588cadc642418a1"
+          }
+        },
+        {
+          "client_id": "635977820495-vvuagkvldqtfku5ngpu45lee9o0djpr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZGYJUNo7DuYgSUhCZ3S58zM0gO7fcYrY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635977820495-o0uujv1vcsb2t4niqb3idtmsfosdh4s3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ping.ios"
+              }
+            },
+            {
+              "client_id": "635977820495-vvuagkvldqtfku5ngpu45lee9o0djpr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
