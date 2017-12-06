@@ -1,3 +1,4 @@
+package ping
 import (
         "log"
         "gopkg.in/zabawaba99/firego.v1"
