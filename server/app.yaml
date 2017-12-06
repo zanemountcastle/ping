@@ -10,4 +10,4 @@ handlers:
 #   upload: static/.*\.(gif|png|jpg)$
 
 - url: /.*
-  script: _go_app
+  script: requestHandler
