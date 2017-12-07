@@ -3,20 +3,16 @@ import (
         "log"
         "gopkg.in/zabawaba99/firego.v1"
         "golang.org/x/net/context"
-
-        firebase "firebase.google.com/go"
-        "firebase.google.com/go/auth"
-
+        "net/http"
+        "firebase.google.com/go"
+        // "firebase.google.com/go/auth"
+        "bytes"
+        "encoding/json"
+        "io"
         "google.golang.org/api/option"
 )
 
-f := firego.New("https://ping-fdb36.firebaseIO.com", nil)
 
-opt := option.WithCredentialsFile("ping-fdb36-firebase-adminsdk-plh3v-282c5f84fb.json")
-app, err := firebase.NewApp(context.Background(), nil, opt)
-if err != nil {
-        log.Fatalf("error initializing app: %v\n", err)
-}
 
 
 
@@ -34,30 +30,38 @@ type Payload struct {
 }
 
 func (p *Payload) UploadToFB() error {
+
+  f := firego.New("https://ping-fdb36.firebaseIO.com", nil)
+  // opt := option.WithCredentialsFile("ping-fdb36-firebase-adminsdk-plh3v-282c5f84fb.json")
+  // app, err := firebase.NewApp(context.Background(), nil, opt)
+  // if err != nil {
+  //         log.Fatalf("error initializing app: %v\n", err)
+  // }
+
   // the storageFolder method ensures that there are no name collision in
   // case we get same timestamp in the key name
-  storage_path := fmt.Sprintf("%v/%v", p.storageFolder, time.Now().UnixNano())
+//  storage_path := fmt.Sprintf("%v/%v", p.storageFolder, time.Now().UnixNano())
 
 	b := new(bytes.Buffer)
-	encodeErr := json.NewEncoder(b).Encode(payload)
+	encodeErr := json.NewEncoder(b).Encode(p)
 	if encodeErr != nil {
 		return encodeErr
 	}
 
-  // pushedFirego, err := f.Push(encodeErr)
-  // if err != nil {
-  // 	log.Fatal(err)
-  // }
-  //
-  // var bar string
-  // if err := pushedFirego.Value(&bar); err != nil {
-  // 	log.Fatal(err)
-  // }
-  //
+  pushedFirego, err := f.Push(encodeErr)
+  if err != nil {
+  	return err;
+  }
+
+  var bar string
+  if err := pushedFirego.Value(&bar); err != nil {
+  	return err
+  }
+
   // // prints "https://my-firebase-app.firebaseIO.com/-JgvLHXszP4xS0AUN-nI: bar"
   // fmt.Printf("%s: %s\n", pushedFirego, bar)
 
-	return f.Push(encodeErr)
+	return err
 }
 
 
@@ -73,7 +77,7 @@ func payloadHandler(w http.ResponseWriter, r *http.Request) {
 
   // Read the body into a string for json decoding
 	var content = &PayloadCollection{}
-	err := json.NewDecoder(io.LimitReader(r.Body, MaxLength)).Decode(&content)
+	err := json.NewDecoder(io.LimitReader(r.Body, 10000)).Decode(&content)
     if err != nil {
 		w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 		w.WriteHeader(http.StatusBadRequest)
