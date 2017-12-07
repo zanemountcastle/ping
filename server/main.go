@@ -158,8 +158,5 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		requestHandler(w, r, jobQueue)
 	})
-  http.HandleFunc("/work", func(w http.ResponseWriter, r *http.Request) {
-    requestHandler(w, r, jobQueue)
-  })
 	log.Fatal(http.ListenAndServe(":"+*port, nil))
 }
