@@ -1,4 +1,4 @@
-import { Notifications } from 'expo';
+// import { Notifications } from 'expo';
 import React from 'react';
 import { View, Button, Text } from 'react-native'
 import { StackNavigator } from 'react-navigation';

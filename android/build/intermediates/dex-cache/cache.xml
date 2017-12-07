@@ -3,291 +3,291 @@
 
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.2.0_98606cce11a68a9d4733bd8780fc56d9b05d61af.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="20ea90cf871500086e68686dad7a039f2dffad8f">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-11.6.2_80d6c926d76fdf9380c21797c2ce39e2d43eed10.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_a1565b7ae4d29b48f11e95c143f0a8f2f2486ddd.jar" />
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_90c4d74340896a47bf3f590efc0d6fd66b7558b6.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="108c3cdbdb89a05d388a170bd3549b1e43ad6d54">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-11.6.2_61e0be8981fe830b84d5378984f0a385a7827737.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_3905ec1e3f550704833ca4a0b3c666d00e52e1d0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a0b869be21f2e39e9b337bec395d9a7e111da21e">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-11.6.2_ead1736d9b9299e28475c1457fd2e317af0155ec.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="225f093d9a041f8206d812d3055a886a816ac365">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.6.2_76ef6340652f0768511f72f888c77f2dfd0ac8ba.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_36025cf1c1364e4f91d07da4a90cce50665a4a6c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_dbeb75c0dabb701e7cea79cd5812e6f5fe5114a3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_a11518ac4210d4052805c5f2997e3c0fcda2e90d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_3149f962fd5465dfaf434c00f8611df14692c1da.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_c09a0ad02ffaf04c08c202f7366614f0181c4f4f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.5/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_b7942cadeadeaf571a7f2c088ab77effc1082060.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.5/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="610b957661a666d16b2cd4664c6bf4370226dfd2">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.49.5_23265bf367f890afe9fd10644abda414fb0ab6da.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.2.0_badddaa7b1f30cf5f22f3b22aaa6e924168971c4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.2.0_beaac1cd6cf07b0f8305873ca38a16eb99153364.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_546d1b9676195a955c7910e77b7847702dc88c6c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_e88e587a3f079682efc7631f74f264d792dc624c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/jars/classes.jar"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.2.0_a525c1d38128a54aa3773f720734177e51886798.jar" />
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.2.0_f492ea176ea8e735074a7b2faa9da3aaac7677af.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fd6ae8c61bd548b134265ef3c37807d4efcc854c">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.6.2_6bd8bc37cbc3ee9324d5a242d4ba12c9e40989c4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="b0ae7bfe4591746f6491a4a270ee56712062d1ca">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-11.6.2_f0b95113393730c45155d94cde1ac83be8f982fb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.2.0_067bb092287bf9c39aa167258624ebe0ba5a68ec.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/cristhianmunoz/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jar="/Users/zanemountcastle/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_f36149ab8cef0e0cc5efe2715b30c015ea2da640.jar" />
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_531854cdc31e18f0fb4445c31deeedaf7173fd9d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.5/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.2.0_53f00f0a789de50cbbeae057ac9687c300b17cda.jar" />
+        sha1="610b957661a666d16b2cd4664c6bf4370226dfd2">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.49.5_ef4c190ca125837d1ef2a0483506217f49d0d239.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jar="/Users/zanemountcastle/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_d4ef186eaeee15c92e3ccfb5d426558c8d6b2823.jar" />
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_501e43b4831a9967687de73002addc891389f88b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/jars/classes.jar"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.6.2/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="4d7b1a23cecd2855bdfbd8266650d140e9e6977c">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-11.6.2_78811aadd34a009d9af4ecdd66bf443f9eb3c518.jar" />
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-11.6.2_a0168ecc467b198212577fc0b4b117cb2a007850.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jar="/Users/zanemountcastle/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_e26151c3d93f5ece2cacca9f50b49d40db48b772.jar" />
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_85c274ed1e26dde91d86bb98782388745d98b4b2.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_0cb0c15ab7d1768b686178df0a3b049ac6576b66.jar" />
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.2.0_a0a640e02d8c5bc88e56acde87925934148dfbd9.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.5/jars/libs/infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_058dbf2122b53f8e0d95fb513b994b3cbc19f0a7.jar" />
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_dd8916e19b6c684892250a9282789afafbf96ec7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_62c64b3737fdb10436ae1ab612391dbdbffd65b2.jar" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.2.0_1e3b545e3592bc9a37aa754ec8b8958962a1066c.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.6.2/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_ab6c813d0e54aebf68cc711e3735f853f3c24c04.jar" />
+        sha1="225f093d9a041f8206d812d3055a886a816ac365">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.6.2_41acc86b2f9b338f0691a9aef29ab89d3bbc60c7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_1ed6581a7cf89b22d05c7dadd721975a10b596d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_533d7bd646b4dc14430d81ddf72305163284aa45.jar" />
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_37ccb36fbd0785ceb334d63e24a2b9703f2cf555.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_d8c94f5e9d15d55b8ae99858a5a01f4d4b148e42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b0ae7bfe4591746f6491a4a270ee56712062d1ca">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-11.6.2_09902a40bb0e40ada4911b2bd4a817b4233accf6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_5e7f3859486c0815c21a2394d8428cc4ed9f21fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_95531e7040e676e2c408be44cb12980dd372f010.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_6370ff879f3a702f44083c58f5e8f51cc2a47822.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="20ea90cf871500086e68686dad7a039f2dffad8f">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-11.6.2_2c889a8e6afde060a4f6371879942f4207fac9a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_622379d03c6d7ff7f79c78c3827499a14bff718a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_0ed9eb486448d1579264990fffab11829028ce5e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_19d27ccc3604dd2c56f6331fe04072d79a2e38e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.2.0_aac4d96ed2ec6f965c6820908a2f8cf777f7279e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_f828e5c096dcf1c76b5cc0c1d6fdd8a7b67f707c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_805b7656b0c2f32d4e500acbb663e567c0d045cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_7356ea7450b6f491192b9ad64f5ad297351d4b62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.2.0_1130690ebe885913322e41b860ca112401e82ea6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="108c3cdbdb89a05d388a170bd3549b1e43ad6d54">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-11.6.2_4af41db8241d610b2c5829aea641d8d779a9e9d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_08cc70c26be50a370785a2bdd3bf8d82a1a4db2d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a0b869be21f2e39e9b337bec395d9a7e111da21e">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-11.6.2_2aa17ba77337a51dff230c9b1e98c4781ae7b7e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.2.0_f57d3d2ff25e106026340a73afdbd2368c7e49c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.6.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fd6ae8c61bd548b134265ef3c37807d4efcc854c">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.6.2_791964e6f6c680c49cafa64b61d4b2103b292fed.jar" />
     </item>
 
 </items>

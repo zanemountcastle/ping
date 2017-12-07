@@ -1,0 +1,27 @@
+dependencies: \
+  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/Libraries/Network/RCTNetworking.mm \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTNetworkTask.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestDelegate.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestHandler.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTNetworking.h \
+  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventEmitter.h \
+  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/Libraries/Network/RCTHTTPRequestHandler.h

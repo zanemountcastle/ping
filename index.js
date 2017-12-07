@@ -23,9 +23,13 @@ export default class Ping extends React.Component {
 
   render() {
     return (
-      <Provider store={Store}>
-        <RootNavigation />
-      </Provider>
+      <Text>halo</Text>
     );
   }
 }
+
+
+// <Provider store={Store}>
+//   <RootNavigation />
+// </Provider>
+//

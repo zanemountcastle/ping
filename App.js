@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Tabs } from './src/lib/Router';
-import { AppLoading } from 'expo';
+// import { AppLoading } from 'expo';
 import RootNavigation from './src/containers/RootNavigation';
 import * as firebase from 'firebase';
-import {Notifications} from 'expo';
+// import {Notifications} from 'expo';
 
 import { Provider } from 'react-redux';
 import Store from './src/lib/Store';
