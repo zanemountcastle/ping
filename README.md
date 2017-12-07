@@ -28,7 +28,7 @@ Services send a `HTTP POST` request to Ping's webhook, which interprets the resu
 	2. The developer should be able to post the feed into the app once it’s developed.
 
 ## To Run Server
-'''
+```
 cd server
 go run main.go -max_workers 5 -port 8080
-'''
+```
