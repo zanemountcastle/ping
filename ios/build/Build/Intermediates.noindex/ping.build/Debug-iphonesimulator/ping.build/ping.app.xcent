@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>7GJWX3Y39H.org.reactjs.native.example.ping</string>
+	<string>QND6MLNP85.com.nyuad.ping</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>7GJWX3Y39H.org.reactjs.native.example.ping</string>
+		<string>QND6MLNP85.com.nyuad.ping</string>
 	</array>
 </dict>
 </plist>

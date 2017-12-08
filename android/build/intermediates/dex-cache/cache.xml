@@ -289,5 +289,32 @@
         sha1="fd6ae8c61bd548b134265ef3c37807d4efcc854c">
         <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.6.2_791964e6f6c680c49cafa64b61d4b2103b292fed.jar" />
     </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.17/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="248218f163235e6d2a81188eaa1db0ec61193055">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/me.leolin-ShortcutBadger-1.1.17_2232392c772f52cde7bcd56b5a6d229363917efd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/ping/react-native-fcm/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e4afe54af967e2d7c6f360b49238d6cf70a73b7d">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/ping-react-native-fcm-unspecified_c72df374f8b65c2e32cab185d54c599a7a1e18c4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/exploded-aar/ping/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/pre-dexed/debug/ping-react-native-vector-icons-unspecified_be19e7efcf033000c8407ca5b7bd10f47849f38d.jar" />
+    </item>
 
 </items>
