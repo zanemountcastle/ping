@@ -4,8 +4,6 @@
   "private": true,
   "devDependencies": {
     "babel-preset-react-native": "^4.0.0",
-    "jest-expo": "^22.0.0",
-    "react-native-scripts": "1.7.0",
     "react-test-renderer": "16.0.0-beta.5",
     "redux-logger": "^3.0.6",
     "remote-redux-devtools": "^0.5.12",
@@ -15,10 +13,11 @@
   "scripts": {
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "test": "node node_modules/jest/bin/jest.js --watch",
-    "postinstall": "remotedev-debugger --hostname localhost --port 5678 --injectserver"
+    "postinstall": "remotedev-debugger --hostname localhost --port 5678 --injectserver",
+    "clean": "watchman watch-del-all && rm -rf node_modules/ && npm install && rm -fr $TMPDIR/react-*"
   },
   "remotedev": {
     "hostname": "localhost",
@@ -32,6 +31,7 @@
     "react": "16.0.0-beta.5",
     "react-native": "^0.49.5",
     "react-native-elements": "^0.18.4",
+    "react-native-vector-icons": "^4.4.2",
     "react-navigation": "^1.0.0-beta.19",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
