@@ -50,7 +50,7 @@
 		D476B8FFB1CD4232A0EC5F38 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD523520E7594110B082589D /* FontAwesome.ttf */; };
 		D4E2446FAFB64E0EB6A18F97 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE6B11532E8443599281808E /* Foundation.ttf */; };
 		DC2214B5CFB74A16A39BA57E /* libRNFIRMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E48A05A35F424568A6BD1971 /* libRNFIRMessaging.a */; };
-		E20221B21FDAFE5100987172 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E202218E1FDAFE5100987172 /* GoogleService-Info.plist */; };
+		E20221B41FDB04CC00987172 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E20221B31FDB04CC00987172 /* GoogleService-Info.plist */; };
 		F39227C2E0BD4CE986C93AF5 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 930B007FB83548D7B487B6A1 /* EvilIcons.ttf */; };
 		F6A4CA86BA2245458DBB161B /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D234150C049569A8311B0 /* Entypo.ttf */; };
 /* End PBXBuildFile section */
@@ -363,7 +363,7 @@
 		D88D533C6A634E23BD614001 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		DEDB2D1305169523CD60F148 /* Pods-pingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pingTests/Pods-pingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E05AABFB38426FE0D4814340 /* Pods-ping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ping.release.xcconfig"; path = "Pods/Target Support Files/Pods-ping/Pods-ping.release.xcconfig"; sourceTree = "<group>"; };
-		E202218E1FDAFE5100987172 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E20221B31FDB04CC00987172 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ping/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E219DB791FDAB7BA00B5757A /* ping.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ping.entitlements; path = ping/ping.entitlements; sourceTree = "<group>"; };
 		E283CC793F644521BA1B59B3 /* RNFIRMessaging.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFIRMessaging.xcodeproj; path = "../node_modules/react-native-fcm/ios/RNFIRMessaging.xcodeproj"; sourceTree = "<group>"; };
 		E48A05A35F424568A6BD1971 /* libRNFIRMessaging.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFIRMessaging.a; sourceTree = "<group>"; };
@@ -512,7 +512,7 @@
 		13B07FAE1A68108700A75B9A /* ping */ = {
 			isa = PBXGroup;
 			children = (
-				E202218E1FDAFE5100987172 /* GoogleService-Info.plist */,
+				E20221B31FDB04CC00987172 /* GoogleService-Info.plist */,
 				E219DB791FDAB7BA00B5757A /* ping.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -1166,7 +1166,7 @@
 				245EECF52B684EF6BD93DC1A /* Octicons.ttf in Resources */,
 				3630E5D5BCBA41C6A0FE631B /* SimpleLineIcons.ttf in Resources */,
 				B11BD35FACD945ED8834B9BE /* Zocial.ttf in Resources */,
-				E20221B21FDAFE5100987172 /* GoogleService-Info.plist in Resources */,
+				E20221B41FDB04CC00987172 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
