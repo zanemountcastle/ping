@@ -1,5 +1,6 @@
 dependencies: \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/Libraries/Image/RCTImageLoader.m \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native-fcm/ios/../../../ios/Pods/Firebase/Core/Sources/module.modulemap \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \

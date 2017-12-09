@@ -2,6 +2,7 @@ dependencies: \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/Libraries/Image/RCTGIFImageDecoder.m \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/Libraries/Image/RCTGIFImageDecoder.h \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTImageLoader.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native-fcm/ios/../../../ios/Pods/Firebase/Core/Sources/module.modulemap \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
   /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
