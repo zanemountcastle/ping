@@ -3,7 +3,6 @@ import { StyleSheet, Text, View ,  ScrollView, Alert} from 'react-native';
 import { Header } from 'react-native-elements';
 
 export default class Discover extends Component {
-
   render() {
       return (
         <View style={styles.container}>

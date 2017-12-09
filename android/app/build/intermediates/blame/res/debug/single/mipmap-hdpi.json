@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/zanemountcastle/code/swe/ping/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/zanemountcastle/code/swe/ping/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/cristhianmunoz/Documents/soft-eng-project/ping/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]

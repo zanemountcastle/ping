@@ -1,39 +1,67 @@
-import { Permissions, Notifications } from 'expo';
+// import { Permissions, Notifications } from 'expo';
 import * as firebase from 'firebase';
 
-const PUSH_ENDPOINT = 'https://ping-fdb36.firebaseio.com/users/';
+import { Platform, AsyncStorage } from 'react-native';
 
+import FCM, {FCMEvent, RemoteNotificationResult, WillPresentNotificationResult, NotificationType} from "react-native-fcm";
 
-export async function registerForPushNotificationsAsync() {
-  // Android remote notification permissions are granted during the app
-  // install, so this will only ask on iOS
-  let { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
-
-  // Stop here if the user did not grant permissions
-  if (status !== 'granted') {
-    return;
+AsyncStorage.getItem('lastNotification').then(data=>{
+  if(data){
+    // if notification arrives when app is killed, it should still be logged here
+    console.log('last notification', JSON.parse(data));
+    AsyncStorage.removeItem('lastNotification');
   }
-  // Get the token that uniquely identifies this device
-  let token = await Notifications.getExpoPushTokenAsync();
+})
 
-  userID = firebase.auth().currentUser.uid;
+export function registerKilledListener(){
+  // these callback will be triggered even when app is killed
+  FCM.on(FCMEvent.Notification, notif => {
+    AsyncStorage.setItem('lastNotification', JSON.stringify(notif));
+  });
+}
 
-  firebase.database().ref('/users/' + userID).update({ token: token });
+// these callback will be triggered only when app is foreground or background
+export function registerAppListener(){
+  FCM.on(FCMEvent.Notification, notif => {
+    console.log("Notification", notif);
+    if(notif.local_notification){
+      return;
+    }
+    if(notif.opened_from_tray){
+      return;
+    }
 
+    if(Platform.OS ==='ios'){
+            //optional
+            //iOS requires developers to call completionHandler to end notification process. If you do not call it your background remote notifications could be throttled, to read more about it see the above documentation link.
+            //This library handles it for you automatically with default behavior (for remote notification, finish with NoData; for WillPresent, finish depend on "show_in_foreground"). However if you want to return different result, follow the following code to override
+            //notif._notificationType is available for iOS platfrom
+            switch(notif._notificationType){
+              case NotificationType.Remote:
+                notif.finish(RemoteNotificationResult.NewData) //other types available: RemoteNotificationResult.NewData, RemoteNotificationResult.ResultFailed
+                break;
+              case NotificationType.NotificationResponse:
+                notif.finish();
+                break;
+              case NotificationType.WillPresent:
+                notif.finish(WillPresentNotificationResult.All) //other types available: WillPresentNotificationResult.None
+                break;
+            }
+    }
+  });
 
+  FCM.on(FCMEvent.RefreshToken, token => {
+    console.log("TOKEN (refreshUnsubscribe)", token);
+    this.props.onChangeToken(token);
+  });
 
-   // POST the token to our backend so we can use it to send pushes from there
-   // This code is not doing much (nothing)for us now
-   return fetch(PUSH_ENDPOINT, {
-     method: 'POST',
-     headers: {
-       Accept: 'application/json',
-       'Content-Type': 'application/json',
-     },
-     body: JSON.stringify({
-       token: {
-         value: token,
-       },
-     }),
-   });
-};
+  FCM.enableDirectChannel();
+  FCM.on(FCMEvent.DirectChannelConnectionChanged, (data) => {
+    console.log('direct channel connected' + data);
+  });
+  setTimeout(function() {
+    FCM.isDirectChannelEstablished().then(d => console.log(d));
+  }, 1000);
+}
+
+const PUSH_ENDPOINT = 'https://ping-fdb36.firebaseio.com/users/';

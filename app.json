@@ -1,10 +1,4 @@
 {
-  "expo": {
-    "sdkVersion": "22.0.0",
-    "splash": {
-      "image": "./static/assets/splash.png",
-      "backgroundColor": "#FF7C7C"
-    },
-    "orientation": "portrait",
-  },
+	"name":"ping",
+	"displayName":"ping"
 }
