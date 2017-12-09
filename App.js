@@ -80,7 +80,11 @@ export default class Ping extends React.Component {
       console.log(notif)
     });
 
+<<<<<<< HEAD
 //    FCM.subscribeToTopic('/topics/chat');
+=======
+    FCM.subscribeToTopic('/topics/chat');
+>>>>>>> 37412ab241d3967b7fc4ebc2b933e9680fd14252
   }
 
   componentWillUnmount() {
