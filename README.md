@@ -26,3 +26,9 @@ Services send a `HTTP POST` request to Ping's webhook, which interprets the resu
 4. As a developer, I want to be able to create a feed.
 	1. There will be complete documentation for how to create a webhook and corresponding feed
 	2. The developer should be able to post the feed into the app once it’s developed.
+
+## To Run Server
+```
+cd server
+go run main.go -max_workers 5 -port 8080
+```
