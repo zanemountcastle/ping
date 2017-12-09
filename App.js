@@ -12,6 +12,7 @@ import FCM, {FCMEvent, RemoteNotificationResult, WillPresentNotificationResult, 
 
 // this shall be called regardless of app state: running, background or not running. Won't be called when app is killed by user in iOS
 FCM.on(FCMEvent.Notification, async (notif) => {
+  console.log("in FCMEvent")
   // there are two parts of notif. notif.notification contains the notification payload, notif.data contains data payload
   if (notif.local_notification) {
     //this is a local notification
@@ -69,18 +70,22 @@ export default class Ping extends React.Component {
       // store fcm token in your server
     });
 
-    this.notificationListener = FCM.on(FCMEvent.Notification, async (notif) => {
-      // optional, do some component related stuff
-    });
+
 
     // initial notification contains the notification that launchs the app. If user launchs app by clicking banner, the banner notification info will be here rather than through FCM.on event
     // sometimes Android kills activity when app goes to background, and when resume it broadcasts notification before JS is run. You can use FCM.getInitialNotification() to capture those missed events.
     // initial notification will be triggered all the time even when open app by icon so send some action identifier when you send notification
     FCM.getInitialNotification().then(notif => {
       console.log(notif)
+      console.log("get initial notification!");
     });
 
-    FCM.subscribeToTopic('/topics/chat');
+
+    this.notificationListener = FCM.on(FCMEvent.Notification, async (notif) => {
+      console.log("got a notification!");
+      // optional, do some component related stuff
+    });
+
   }
 
   componentWillUnmount() {

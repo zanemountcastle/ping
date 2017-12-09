@@ -5,9 +5,10 @@ import {
   Text,
   TextInput,
   StyleSheet,
-  View } from 'react-native';
+  View, Alert } from 'react-native';
 import * as firebase from 'firebase';
 import {StackNavigator} from 'react-navigation';
+import FCM from 'react-native-fcm';
 import {Button, FormLabel, FormInput} from 'react-native-elements'
 
 export default class login extends React.Component {
@@ -30,6 +31,11 @@ export default class login extends React.Component {
     const {email, password} = this.state;
     firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
       this.setState({error: '', loading: false});
+      FCM.getFCMToken().then(token => {
+          Alert.alert(token);
+          userID = firebase.auth().currentUser.uid;
+          firebase.database().ref('/users/' + userID).update({token: token});
+      });
       this.props.navigation.navigate('Main');
 
     }).catch(() => {

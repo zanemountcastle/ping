@@ -10,7 +10,7 @@ import * as firebase from 'firebase';
 import {StackNavigator} from 'react-navigation';
 import {Button, FormLabel, FormInput} from 'react-native-elements'
 
-import { registerForPushNotificationsAsync } from '../lib/Utilities'
+//import { registerForPushNotificationsAsync } from '../lib/Utilities'
 
 export default class login extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class login extends React.Component {
     const {email, password} = this.state;
     firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
       this.setState({error: '', loading: false});
-      registerForPushNotificationsAsync();
+      //registerForPushNotificationsAsync();
       this.props.navigation.navigate('Main');
 
     }).catch(() => {
