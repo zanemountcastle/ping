@@ -59,7 +59,10 @@ export default class Ping extends React.Component {
   componentDidMount() {
     // iOS: show permission prompt for the first call. later just check permission in user settings
     // Android: check permission in user settings
-    FCM.requestPermissions().then(() => console.log('granted')).catch(() => console.log('notification permission rejected'));
+    FCM.requestPermissions().then(() => {
+      console.log('granted');
+    }).catch(() => console.log('notification permission rejected'));
+
 
     FCM.getFCMToken().then(token => {
       console.log(token)
@@ -76,6 +79,8 @@ export default class Ping extends React.Component {
     FCM.getInitialNotification().then(notif => {
       console.log(notif)
     });
+
+    FCM.subscribeToTopic('/topics/chat');
   }
 
   componentWillUnmount() {
