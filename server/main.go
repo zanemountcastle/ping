@@ -24,6 +24,7 @@ import (
 )
 type Payload struct {
     Feed string
+    Token string
     // title string
     // body string
     // feedId int32
@@ -81,9 +82,10 @@ fmt.Printf("Config JSON\n")
 
 
   fmt.Printf("push\n")
-
+  if(p.token == fb.Get("/feed/"+p.Feed)){
    fb, err = fb.Ref("/feed/"+ p.Feed)
    pushedFirego, err := fb.Push( p.Feed)
+  }
 
   // fmt.Printf(pushedFirego)
 

@@ -3,3 +3,4 @@ node_modules/
 .expo/
 .idea/
 npm-debug.*
+/server/ping-fdb36-firebase-adminsdk-plh3v-282c5f84fb.json
