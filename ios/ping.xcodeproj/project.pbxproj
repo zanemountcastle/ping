@@ -50,7 +50,7 @@
 		D476B8FFB1CD4232A0EC5F38 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD523520E7594110B082589D /* FontAwesome.ttf */; };
 		D4E2446FAFB64E0EB6A18F97 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE6B11532E8443599281808E /* Foundation.ttf */; };
 		DC2214B5CFB74A16A39BA57E /* libRNFIRMessaging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E48A05A35F424568A6BD1971 /* libRNFIRMessaging.a */; };
-		E20221B41FDB04CC00987172 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E20221B31FDB04CC00987172 /* GoogleService-Info.plist */; };
+		E2A682731FDC53C600B030F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2A682721FDC53C500B030F1 /* GoogleService-Info.plist */; };
 		F39227C2E0BD4CE986C93AF5 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 930B007FB83548D7B487B6A1 /* EvilIcons.ttf */; };
 		F6A4CA86BA2245458DBB161B /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D234150C049569A8311B0 /* Entypo.ttf */; };
 /* End PBXBuildFile section */
@@ -363,9 +363,9 @@
 		D88D533C6A634E23BD614001 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		DEDB2D1305169523CD60F148 /* Pods-pingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pingTests/Pods-pingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E05AABFB38426FE0D4814340 /* Pods-ping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ping.release.xcconfig"; path = "Pods/Target Support Files/Pods-ping/Pods-ping.release.xcconfig"; sourceTree = "<group>"; };
-		E20221B31FDB04CC00987172 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ping/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E219DB791FDAB7BA00B5757A /* ping.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ping.entitlements; path = ping/ping.entitlements; sourceTree = "<group>"; };
 		E283CC793F644521BA1B59B3 /* RNFIRMessaging.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFIRMessaging.xcodeproj; path = "../node_modules/react-native-fcm/ios/RNFIRMessaging.xcodeproj"; sourceTree = "<group>"; };
+		E2A682721FDC53C500B030F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ping/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E48A05A35F424568A6BD1971 /* libRNFIRMessaging.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFIRMessaging.a; sourceTree = "<group>"; };
 		ED888C21EF73472CA982F79C /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		FD523520E7594110B082589D /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -512,7 +512,7 @@
 		13B07FAE1A68108700A75B9A /* ping */ = {
 			isa = PBXGroup;
 			children = (
-				E20221B31FDB04CC00987172 /* GoogleService-Info.plist */,
+				E2A682721FDC53C500B030F1 /* GoogleService-Info.plist */,
 				E219DB791FDAB7BA00B5757A /* ping.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -790,17 +790,21 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = QND6MLNP85;
+						DevelopmentTeam = YD5KR7BFVH;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = QND6MLNP85;
+						DevelopmentTeam = YD5KR7BFVH;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 							com.apple.Keychain = {
 								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 						};
 					};
@@ -1167,7 +1171,7 @@
 				245EECF52B684EF6BD93DC1A /* Octicons.ttf in Resources */,
 				3630E5D5BCBA41C6A0FE631B /* SimpleLineIcons.ttf in Resources */,
 				B11BD35FACD945ED8834B9BE /* Zocial.ttf in Resources */,
-				E20221B41FDB04CC00987172 /* GoogleService-Info.plist in Resources */,
+				E2A682731FDC53C600B030F1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1421,7 +1425,7 @@
 			baseConfigurationReference = DEDB2D1305169523CD60F148 /* Pods-pingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = QND6MLNP85;
+				DEVELOPMENT_TEAM = YD5KR7BFVH;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1454,7 +1458,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = QND6MLNP85;
+				DEVELOPMENT_TEAM = YD5KR7BFVH;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1481,9 +1485,12 @@
 			baseConfigurationReference = 7FFEBD653B6DC4D726E4DF08 /* Pods-ping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ping/ping.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = QND6MLNP85;
+				DEVELOPMENT_TEAM = YD5KR7BFVH;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1496,8 +1503,11 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nyuad.ping-swe";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swe.ping;
 				PRODUCT_NAME = ping;
+				PROVISIONING_PROFILE = "edbe8a41-a35f-46d6-bf7f-3a5aeee25ebc";
+				PROVISIONING_PROFILE_SPECIFIER = "Ping SWE Application";
+				TARGETED_DEVICE_FAMILY = 1;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../node_modules/react-native-fcm/ios";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1508,8 +1518,11 @@
 			baseConfigurationReference = E05AABFB38426FE0D4814340 /* Pods-ping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ping/ping.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QND6MLNP85;
+				DEVELOPMENT_TEAM = YD5KR7BFVH;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1522,8 +1535,11 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nyuad.ping-swe";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swe.ping;
 				PRODUCT_NAME = ping;
+				PROVISIONING_PROFILE = "2dbf87ef-f371-44ae-ac43-00b021e76f89";
+				PROVISIONING_PROFILE_SPECIFIER = "Ping SWE Application";
+				TARGETED_DEVICE_FAMILY = 1;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../node_modules/react-native-fcm/ios";
 				VERSIONING_SYSTEM = "apple-generic";
 			};

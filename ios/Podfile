@@ -7,6 +7,7 @@ target 'ping' do
 
   # Pods for ping
   pod 'Firebase/Messaging'
+  pod 'Firebase/Core'
 
   target 'ping-tvOSTests' do
     inherit! :search_paths
