@@ -1,6 +1,6 @@
 runtime: go
 api_version: go1
-application: requestHandler
+application: main
 
 handlers:
 # - url: /stylesheets
