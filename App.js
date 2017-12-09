@@ -66,7 +66,7 @@ export default class Ping extends React.Component {
 
 
     FCM.getFCMToken().then(token => {
-      console.log(token)
+      console.log(token);
       // store fcm token in your server
     });
 
