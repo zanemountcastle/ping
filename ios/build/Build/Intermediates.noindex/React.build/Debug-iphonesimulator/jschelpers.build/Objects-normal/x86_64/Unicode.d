@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/ReactCommon/jschelpers/Unicode.h
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/ReactCommon/jschelpers/Unicode.h

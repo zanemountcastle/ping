@@ -1,3 +1,4 @@
-dependencies: /Users/zanemountcastle/code/swe/ping/ios/ping/main.m \
-  /Users/zanemountcastle/code/swe/ping/ios/Pods/Firebase/Core/Sources/module.modulemap \
-  /Users/zanemountcastle/code/swe/ping/ios/ping/AppDelegate.h
+dependencies: \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/ping/main.m \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/Pods/Firebase/Core/Sources/module.modulemap \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/ping/AppDelegate.h

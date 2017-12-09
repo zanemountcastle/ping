@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.c \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/ReactCommon/yoga/yoga/YGMacros.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/ReactCommon/yoga/yoga/YGEnums.h
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.c \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/ReactCommon/yoga/yoga/YGNodeList.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/ReactCommon/yoga/yoga/YGMacros.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/ReactCommon/yoga/yoga/YGEnums.h

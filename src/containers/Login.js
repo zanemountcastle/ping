@@ -5,19 +5,18 @@ import {
   Text,
   TextInput,
   StyleSheet,
-  View } from 'react-native';
+  View} from 'react-native';
 import * as firebase from 'firebase';
 import {StackNavigator} from 'react-navigation';
+import FCM from 'react-native-fcm';
 import {Button, FormLabel, FormInput} from 'react-native-elements'
-
-import { registerForPushNotificationsAsync } from '../lib/Utilities'
 
 export default class login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: null,
-      password: null,
+      email: "a@b.com",
+      password: "12345678",
       error: null,
       loading: false
     };
@@ -32,7 +31,12 @@ export default class login extends React.Component {
     const {email, password} = this.state;
     firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
       this.setState({error: '', loading: false});
-      registerForPushNotificationsAsync();
+      FCM.getFCMToken().then(token => {
+        console.log(token);
+        // store fcm token in your server
+        userID = firebase.auth().currentUser.uid;
+        firebase.database().ref('/users/' + userID).update({token: token });
+      });
       this.props.navigation.navigate('Main');
 
     }).catch(() => {

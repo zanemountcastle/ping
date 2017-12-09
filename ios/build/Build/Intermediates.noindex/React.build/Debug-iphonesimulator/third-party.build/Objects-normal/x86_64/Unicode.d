@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/third-party/folly-2016.09.26.00/folly/Unicode.cpp \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/../third-party/folly-2016.09.26.00/folly/Unicode.h
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/third-party/folly-2016.09.26.00/folly/Unicode.cpp \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/../third-party/folly-2016.09.26.00/folly/Unicode.h

@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.mm \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/zanemountcastle/code/swe/ping/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Inspector/RCTInspector.h
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.mm \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Inspector/RCTInspector.h

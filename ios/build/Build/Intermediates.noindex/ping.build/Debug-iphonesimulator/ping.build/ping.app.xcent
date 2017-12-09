@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>QND6MLNP85.com.nyuad.ping</string>
+	<string>QND6MLNP85.com.nyuad.ping-swe</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>QND6MLNP85.com.nyuad.ping</string>
+		<string>QND6MLNP85.com.nyuad.ping-swe</string>
 	</array>
 </dict>
 </plist>

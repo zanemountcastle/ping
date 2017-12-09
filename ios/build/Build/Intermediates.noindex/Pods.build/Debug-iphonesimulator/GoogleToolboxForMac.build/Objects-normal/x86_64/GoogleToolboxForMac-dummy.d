@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/zanemountcastle/code/swe/ping/ios/Pods/Target\ Support\ Files/GoogleToolboxForMac/GoogleToolboxForMac-dummy.m \
-  /Users/zanemountcastle/code/swe/ping/ios/Pods/Target\ Support\ Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/Pods/Target\ Support\ Files/GoogleToolboxForMac/GoogleToolboxForMac-dummy.m \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/ios/Pods/Target\ Support\ Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch

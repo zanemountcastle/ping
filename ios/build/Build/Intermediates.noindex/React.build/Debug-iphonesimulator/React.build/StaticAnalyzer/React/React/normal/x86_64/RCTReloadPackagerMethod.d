@@ -1,11 +1,11 @@
 dependencies: \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/DevSupport/RCTReloadPackagerMethod.m \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/DevSupport/RCTReloadPackagerMethod.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Base/RCTBridge.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Base/RCTBridgeModule.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Base/RCTFrameUpdate.h \
-  /Users/zanemountcastle/code/swe/ping/node_modules/react-native/React/Base/RCTInvalidating.h
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/DevSupport/RCTReloadPackagerMethod.m \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/DevSupport/RCTReloadPackagerMethod.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/cristhianmunoz/Documents/soft-eng-project/ping/node_modules/react-native/React/Base/RCTInvalidating.h
