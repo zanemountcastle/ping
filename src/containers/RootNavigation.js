@@ -2,19 +2,20 @@
 import React from 'react';
 import { View, Button, Text } from 'react-native'
 import { StackNavigator } from 'react-navigation';
-import { LoginScreen } from '../components';
+import { Login, Signup } from '../containers';
 import { Tabs } from '../lib/Router';
 
 const RootStackNavigator = StackNavigator(
   {
     Login:{
-      screen: LoginScreen,
-
+      screen: Login,
+    },
+    Signup: {
+      screen: Signup,
     },
     Main: {
       screen: Tabs,
     },
-
   },
   {
     headerMode: 'none',

@@ -41,16 +41,7 @@ export default class login extends React.Component {
   }
 
   _onSignUpPress() {
-    this.setState({error: '', loading: true});
-    const {email, password} = this.state;
-    firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
-      this.setState({error: '', loading: false});
-      registerForPushNotificationsAsync();
-      this.props.navigation.navigate('Main');
-
-    }).catch(() => {
-      this.setState({error: 'Authentication failed', loading: false});
-    })
+    this.props.navigation.navigate('Signup');
   }
 
   render() {
@@ -92,8 +83,6 @@ export default class login extends React.Component {
           onPress={this._onSignUpPress.bind(this)}
           title="sign up"
           color="#FFF"
-          loading={this.state.loading}
-          disabled={this.state.loading}
           buttonStyle={styles.signup}
         />
       </View>

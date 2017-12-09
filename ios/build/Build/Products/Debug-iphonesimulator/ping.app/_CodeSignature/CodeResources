@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		mYuZ4kRUARwkcp9j0114935HQz8=
+		9pkM9aPZH4Xc3p2wTYMm+AnOyho=
 		</data>
 		<key>Entypo.ttf</key>
 		<data>
@@ -69,6 +69,10 @@
 		<data>
 		iStWmEB1q6TTpoeht5O8TSdKtb0=
 		</data>
+		<key>GoogleService-Info.plist</key>
+		<data>
+		QOPoM+8lz1qSZShKjrVox8AYzOI=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		+oYc0Aob6oY6/MXdF+d3GNoEOk0=
@@ -128,11 +132,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mYuZ4kRUARwkcp9j0114935HQz8=
+			9pkM9aPZH4Xc3p2wTYMm+AnOyho=
 			</data>
 			<key>hash2</key>
 			<data>
-			NQyg14YwGun74oRVpoTXXXYVygIRkbsDT952rKO1CRc=
+			IcZZXgx61OtWl2V7XPOF+0xHdM7JEYFx82g8it46wa4=
 			</data>
 		</dict>
 		<key>Entypo.ttf</key>
@@ -289,6 +293,17 @@
 			<key>hash2</key>
 			<data>
 			inYnSzARwOiRjT2jEooaoBbVT1Ux8ckVmKUBouHF4mk=
+			</data>
+		</dict>
+		<key>GoogleService-Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QOPoM+8lz1qSZShKjrVox8AYzOI=
+			</data>
+			<key>hash2</key>
+			<data>
+			W52khIXDEt6amtnV2iyz7Zux8ECbpMu6BvmfZ1JN5j0=
 			</data>
 		</dict>
 		<key>Ionicons.ttf</key>

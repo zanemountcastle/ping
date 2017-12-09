@@ -790,6 +790,7 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = QND6MLNP85;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
@@ -1420,6 +1421,7 @@
 			baseConfigurationReference = DEDB2D1305169523CD60F148 /* Pods-pingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QND6MLNP85;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1452,6 +1454,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = QND6MLNP85;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1493,7 +1496,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nyuad.ping;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nyuad.ping-swe";
 				PRODUCT_NAME = ping;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../node_modules/react-native-fcm/ios";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1519,7 +1522,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nyuad.ping;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nyuad.ping-swe";
 				PRODUCT_NAME = ping;
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../node_modules/react-native-fcm/ios";
 				VERSIONING_SYSTEM = "apple-generic";
