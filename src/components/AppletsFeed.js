@@ -45,8 +45,8 @@ export default class AppletsFeed extends Component {
               onRefresh={this._onRefresh.bind(this)}
             />
           }>
-          {this.props.feed.map((applet) => (
-            <AppletPreview key={applet.id} applet={applet} />
+          {this.props.feed.map((applet, id) => (
+            <AppletPreview key={id} applet={applet} />
           ))}
         </ScrollView>
       );

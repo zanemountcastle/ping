@@ -102,5 +102,3 @@ export default class Ping extends React.Component {
   }
 
 }
-
-//         <PushNotificationController />

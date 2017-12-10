@@ -21,11 +21,7 @@ export class Applets extends Component {
           centerComponent={{ text: 'My Applets', style: { color: '#4D4C4C', fontSize: 20, fontWeight: '700' } }}
           outerContainerStyles={{ backgroundColor: '#fff' }}
         />
-        <AppletsFeed
-          feed={this.props.applets.data}
-          fetchApplets={this.props.FetchAppletData}
-          isFetching={this.props.applets.isFetching}
-        />
+
       </View>
     );
   }
@@ -46,3 +42,10 @@ function mapStateToProps(state) {
 };
 
 export default connect(mapStateToProps, { FetchAppletData })(Applets);
+
+
+// <AppletsFeed
+//   feed={this.props.applets.data}
+//   fetchApplets={this.props.FetchAppletData}
+//   isFetching={this.props.applets.isFetching}
+// />
