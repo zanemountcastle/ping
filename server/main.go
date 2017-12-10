@@ -24,7 +24,7 @@ import (
 )
 type Payload struct {
     Feed string
-    Token string
+    // Token string
     // title string
     // body string
     // feedId int32
@@ -82,10 +82,10 @@ fmt.Printf("Config JSON\n")
 
 
   fmt.Printf("push\n")
-  if(p.token == fb.Get("/feed/"+p.Feed)){
+  // if(p.token == fb.Get("/feed/"+p.Feed)){
    fb, err = fb.Ref("/feed/"+ p.Feed)
    pushedFirego, err := fb.Push( p.Feed)
-  }
+  // }
 
   // fmt.Printf(pushedFirego)
 
@@ -211,8 +211,17 @@ func requestHandler(w http.ResponseWriter, r *http.Request, jobQueue chan Job) {
 	// }
   // Parse feed
 
-  feed := strings.TrimPrefix(r.URL.Path, "/")
-  io.WriteString(w, feed)
+  // feed := strings.TrimPrefix(r.URL.Path, "/")
+	url := strings.TrimPrefix(r.URL.Path, "/")
+	urlSplit := strings.Split(url, "/")
+	fmt.Printf("%v",urlSplit)
+	fmt.Printf("Feed: %s",urlSplit[0])
+	fmt.Printf("auth: %s",urlSplit[1])
+	feed,authKey := urlSplit[0],urlSplit[1]
+
+
+  io.WriteString(w, authKey)
+	// io.WriteString(w, authKey)
 	// // Parse the delay.
 	// delay, err := time.ParseDuration(r.FormValue("delay"))
 	// if err != nil {
