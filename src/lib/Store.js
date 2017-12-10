@@ -20,7 +20,7 @@ const Store = createStore(
         devTools({
             name: Platform.OS,
             hostname: 'localhost',
-            port: 5678
+            port: 5678,
         }),
     )
 );

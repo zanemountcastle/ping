@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   isFetching: null,
-  data: [],
+  data: {},
   hasError: false,
   errorMessage: null,
 };
@@ -24,6 +24,7 @@ export default function(state = initialState, action) {
       });
 
     case FETCHING_APPLET_DATA_SUCCESS:
+      console.log(action.payload);
       return Object.assign({}, state, {
         isFetching: false,
         data: action.payload,
@@ -38,7 +39,6 @@ export default function(state = initialState, action) {
         hasError: true,
         errorMessage: action.err
       });
-
 
     default:
       return state;
