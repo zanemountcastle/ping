@@ -1,7 +1,7 @@
-import FetchAppletData from './FetchAppletData';
+import FetchMyAppletsData from './FetchMyAppletsData';
 import FetchDiscoveryData from './FetchDiscoveryData';
 
 export {
-  FetchAppletData,
+  FetchMyAppletsData,
   FetchDiscoveryData
 };

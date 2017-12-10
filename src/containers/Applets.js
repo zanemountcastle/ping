@@ -5,13 +5,13 @@ import { connect } from 'react-redux';
 
 import { AppletsFeed } from '../components';
 
-import FetchAppletData from '../actions/FetchAppletData';
+import { FetchMyAppletsData } from '../actions';
 
 export class Applets extends Component {
 
   // Request data when component first mounts
-  componentWillMount() {
-    this.props.FetchAppletData();
+  componentDidMount() {
+    this.props.FetchMyAppletsData();
   }
 
   render() {
@@ -21,7 +21,11 @@ export class Applets extends Component {
           centerComponent={{ text: 'My Applets', style: { color: '#4D4C4C', fontSize: 20, fontWeight: '700' } }}
           outerContainerStyles={{ backgroundColor: '#fff' }}
         />
-
+        <AppletsFeed
+          feed={this.props.applets.data}
+          fetchApplets={this.props.FetchMyAppletsData}
+          isFetching={this.props.applets.isFetching}
+        />
       </View>
     );
   }
@@ -36,16 +40,10 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(state) {
+  console.log("MSTP",state.applets.data);
   return {
     applets: state.applets
   }
 };
 
-export default connect(mapStateToProps, { FetchAppletData })(Applets);
-
-
-// <AppletsFeed
-//   feed={this.props.applets.data}
-//   fetchApplets={this.props.FetchAppletData}
-//   isFetching={this.props.applets.isFetching}
-// />
+export default connect(mapStateToProps, { FetchMyAppletsData })(Applets);

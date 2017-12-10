@@ -1,37 +1,38 @@
 import {
-  FETCHING_DISCOVERY_DATA,
-  FETCHING_DISCOVERY_DATA_SUCCESS,
-  FETCHING_DISCOVERY_DATA_FAIL,
+  FETCHING_APPLET_DATA,
+  FETCHING_APPLET_DATA_SUCCESS,
+  FETCHING_APPLET_DATA_FAIL,
 } from './ActionTypes';
 
 import * as firebase from 'firebase';
 
-export default function FetchDiscoveryData() {
+export default function FetchMyAppletsData() {
   return dispatch => {
 
     // Let the application know that we've started to fetch
     dispatch({
-      type: FETCHING_DISCOVERY_DATA
-    });
+      type: FETCHING_APPLET_DATA
+    })
 
-    let discoveryApplets = {};
+    const userID = firebase.auth().currentUser.uid;
+    let subscriptions = {};
 
     firebase.database()
-      .ref(`/discovery`)
+      .ref(`/users/${userID}/applet_subscriptions`)
       .once('value')
       .then((snapshot) => {
 
         let reads = [];
         // Loop through each applet by ID
-        snapshot.forEach((discovery_applet) => {
+        snapshot.forEach((applet_subscription) => {
           // Fetch the rendering data for each applet
-          const appletID = discovery_applet.key;
+          const appletID = applet_subscription.key;
           // Push a fetch promise into an array for every request that has to happen
           const promise = firebase.database().ref(`/feeds/${appletID}/metadata`)
             .once('value')
             .then((applet_snapshot) => {
               // Add each applet's data to a `subscriptions` object
-              discoveryApplets[appletID] = applet_snapshot.val();
+              subscriptions[appletID] = applet_snapshot.val();
             }, (error) => console.log("ERROR:", error));
           reads.push(promise)
         });
@@ -41,12 +42,12 @@ export default function FetchDiscoveryData() {
 
       }).then(()=> {
         return dispatch({
-          type: FETCHING_DISCOVERY_DATA_SUCCESS,
-          payload: discoveryApplets,
+          type: FETCHING_APPLET_DATA_SUCCESS,
+          payload: subscriptions,
         });
       }, (error) => {
         return dispatch({
-          type: FETCHING_DISCOVERY_DATA_FAIL,
+          type: FETCHING_APPLET_DATA_FAIL,
           payload: error,
         });
       });

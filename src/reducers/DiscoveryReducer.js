@@ -24,6 +24,7 @@ export default function(state = initialState, action) {
       });
 
     case FETCHING_DISCOVERY_DATA_SUCCESS:
+      console.log(action.payload);
       return Object.assign({}, state, {
         isFetching: false,
         data: action.payload,

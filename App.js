@@ -61,29 +61,14 @@ export default class Ping extends React.Component {
     // iOS: show permission prompt for the first call. later just check permission in user settings
     // Android: check permission in user settings
     FCM.requestPermissions().then(() => {
-      console.log('granted');
+        // Do Something
     }).catch(() => console.log('notification permission rejected'));
-
-
-    FCM.getFCMToken().then(token => {
-      console.log(token);
-      // store fcm token in your server
-    });
-
-
 
     // initial notification contains the notification that launchs the app. If user launchs app by clicking banner, the banner notification info will be here rather than through FCM.on event
     // sometimes Android kills activity when app goes to background, and when resume it broadcasts notification before JS is run. You can use FCM.getInitialNotification() to capture those missed events.
     // initial notification will be triggered all the time even when open app by icon so send some action identifier when you send notification
     FCM.getInitialNotification().then(notif => {
-      console.log(notif)
-      console.log("get initial notification!");
-    });
-
-
-    this.notificationListener = FCM.on(FCMEvent.Notification, async (notif) => {
-      console.log("got a notification!");
-      // optional, do some component related stuff
+      // Do something
     });
 
   }

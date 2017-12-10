@@ -32,8 +32,6 @@ export default class login extends React.Component {
     firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
       this.setState({error: '', loading: false});
       FCM.getFCMToken().then(token => {
-        console.log(token);
-        // store fcm token in your server
         userID = firebase.auth().currentUser.uid;
         firebase.database().ref('/users/' + userID).update({token: token });
       });

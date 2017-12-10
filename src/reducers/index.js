@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import AppletReducer from './AppletReducer';
+import MyAppletsReducer from './MyAppletsReducer';
 import DiscoveryReducer from './DiscoveryReducer';
 
 export default combineReducers({
-    applets: AppletReducer,
+    applets: MyAppletsReducer,
     discovery: DiscoveryReducer,
 });

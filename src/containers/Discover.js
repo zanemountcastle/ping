@@ -3,10 +3,9 @@ import { StyleSheet, Text, View ,  ScrollView, Alert} from 'react-native';
 import { Header } from 'react-native-elements';
 
 import { connect } from 'react-redux';
+import { FetchDiscoveryData } from '../actions';
 
-import FetchDiscoveryData from '../actions/FetchDiscoveryData';
-
-import { AppletsFeed, AppletPreview } from '../components';
+import { AppletsFeed } from '../components';
 
 export class Discover extends Component {
   componentWillMount() {
@@ -39,6 +38,7 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(state) {
+  console.log("MSTPD", state);
   return {
     discovery: state.discovery
   }
