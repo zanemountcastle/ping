@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(state) {
-  console.log("MSTPD", state);
   return {
     discovery: state.discovery
   }

@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(state) {
-  console.log("MSTP",state.applets.data);
   return {
     applets: state.applets
   }
