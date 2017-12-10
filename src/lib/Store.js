@@ -21,7 +21,6 @@ const Store = createStore(
             name: Platform.OS,
             hostname: 'localhost',
             port: 5678,
-            latency: 0,
         }),
     )
 );
