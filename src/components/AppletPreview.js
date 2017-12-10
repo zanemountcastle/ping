@@ -22,12 +22,12 @@ export default class AppletPreview extends Component {
         <View style={styles.body}>
           <Text style={styles.pingMeWhen}>Ping me when</Text>
           <View style={styles.divider} />
-          <Text style={styles.titleText}>{this.props.applet.title}</Text>
+          <Text style={styles.messageText}>{this.props.applet.message}</Text>
           <Text style={styles.byLine}>by {this.props.applet.organization}</Text>
         </View>
         <View style={styles.footer}>
-          <Text style={styles.status}>{this.props.applet.status}</Text>
-          <Text style={styles.lastActive}>{this.props.applet.lastActive}</Text>
+          <Text style={styles.status}>On</Text>
+          <Text style={styles.lastActive}>last active today</Text>
         </View>
       </View>
     );
@@ -51,7 +51,7 @@ let styles = StyleSheet.create({
     width: 35,
     backgroundColor: "#FFF"
   },
-  titleText: {
+  messageText: {
     marginTop: 12,
     color: "#FFF",
     fontSize: 24,

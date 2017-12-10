@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import FetchDiscoveryData from '../actions/FetchDiscoveryData';
 
-import { AppletsFeed } from '../components';
+import { AppletsFeed, AppletPreview } from '../components';
 
 export class Discover extends Component {
   componentWillMount() {

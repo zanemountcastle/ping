@@ -45,9 +45,9 @@ export default class AppletsFeed extends Component {
               onRefresh={this._onRefresh.bind(this)}
             />
           }>
-          {this.props.feed.map((applet, id) => (
-            <AppletPreview key={id} applet={applet} />
-          ))}
+          {Object.entries(this.props.feed).map(
+            ([key, value]) => <AppletPreview key={key} applet={value} />
+          )}
         </ScrollView>
       );
     } else {
@@ -68,3 +68,10 @@ let styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+//              ([key, value]) => <AppletPreview key={key} applet={value} />
+
+//
+// {this.props.feed.map((applet, id) => (
+//   <AppletPreview key={id} applet={applet} />
+// ))}
