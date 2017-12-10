@@ -15,8 +15,15 @@ export default function FetchSearchData(topic) {
 
     let subscriptions = {};
 
+    if (topic==""){
+      return dispatch({
+        type: FETCHING_SEARCH_DATA_SUCCESS,
+        payload: subscriptions,
+      });
+    }
+
     firebase.database()
-      .ref('/discovery')
+      .ref('/feeds')
       .once('value')
       .then( (snapshot) => {
           let reads = [];
@@ -50,29 +57,3 @@ export default function FetchSearchData(topic) {
         });
     }
   }
-
-
-
-
-/*    return firebase.database().ref('/discovery').
-    //'/feeds').startAt(topic).endAt(topic+"\uf8ff")
-    //return firebase.databaseReference.orderByChild('_searchLastName').startAt(topic)
-      .on('value', (snapshot) => {
-        // gets around Redux panicking about actions in reducers
-        setTimeout(() => {
-          const searchApplets = snapshot.val() || {};
-          // const discoveryApplets = snapshot.val || [];
-          return dispatch({
-            type: FETCHING_SEARCH_DATA_SUCCESS,
-            payload: searchApplets,
-          });
-        }, 0);
-      }, error => {
-        return dispatch({
-          type: FETCHING_SEARCH_DATA_FAIL,
-          payload: error,
-        })
-      });
-  }
-}
-*/
