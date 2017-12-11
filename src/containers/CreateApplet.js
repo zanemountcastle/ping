@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Alert } from 'react-native';
 import { Button, Header, FormLabel, FormInput } from 'react-native-elements';
-import { uuid, randomColor } from '../lib/Utilities';
+import uuid from 'uuid';
+
+import { randomColor } from '../lib/Utilities';
 
 // Redux
 import { connect } from 'react-redux';
@@ -15,7 +17,7 @@ export class CreateApplet extends Component {
         color: randomColor(),
         message: '',
         organization: 'NYUAD',
-        authKey: uuid(),
+        authKey: uuid.v4(),
     };
   }
 
