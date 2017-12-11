@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import FCM from 'react-native-fcm';
+import * as firebase from 'firebase';
 export default class AppletPreview extends Component {
 
   // Dynamically sets the background color of the previews
@@ -16,8 +17,41 @@ export default class AppletPreview extends Component {
     };
   }
 
+  subscribe = (userID, topic) => {
+    console.log("topic ", topic);
+    firebase.database()
+      .ref(`/users/${userID}/applet_subscriptions`)
+      .update({[topic]: true});
+    FCM.subscribeToTopic(topic);
+  }
+
+  unSubscribe = (userID, topic) => {
+    firebase.database()
+      .ref(`/users/${userID}/applet_subscriptions`)
+      .child(topic).remove();
+    FCM.unsubscribeFromTopic(topic);
+  }
+
+  onPress = () => {
+    const topic = this.props.appletID;
+    const userID = firebase.auth().currentUser.uid;
+    //Check if user is subscribed
+    firebase.database()
+      .ref(`/users/${userID}/applet_subscriptions/${topic}`)
+      .once('value')
+      .then( (snapshot) => {
+        if (snapshot.val()){
+          this.unSubscribe(userID, topic);
+        }
+        else {
+          this.subscribe(userID, topic);
+        }
+      });
+  }
+
   render() {
     return (
+      <TouchableOpacity onPress={this.onPress}>
       <View style={this.bodyStyle()}>
         <View style={styles.body}>
           <Text style={styles.pingMeWhen}>Ping me when</Text>
@@ -30,6 +64,7 @@ export default class AppletPreview extends Component {
           <Text style={styles.lastActive}>last active today</Text>
         </View>
       </View>
+      </TouchableOpacity>
     );
   }
 }
