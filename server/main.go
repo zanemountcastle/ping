@@ -17,6 +17,8 @@ import (
 	"golang.org/x/oauth2/google"
 	"time"
 )
+
+// Payload holds the data to push to firebase
 type Payload struct {
 	Feed string
 	Key string
@@ -26,13 +28,11 @@ type Payload struct {
 type Job struct {
 	Payload Payload
 }
-type AuthKey struct {
-	authorization_key string
-}
 
 func (p *Payload) UploadToFB() error {
 	fmt.Printf("Attempting to upload to firebase")
 
+	// Add auth credentials
 	d, err := ioutil.ReadFile("ping-fdb36-firebase-adminsdk-plh3v-282c5f84fb.json")
 	if err != nil {
 		return err
@@ -58,10 +58,6 @@ func (p *Payload) UploadToFB() error {
 
 	fb.Child("/feeds/"+p.Feed).Value(&result)
 
-	// fmt.Printf("\n\nLength %d",len(result))
-	// fmt.Printf("%#v", result)
-	// fmt.Printf("\n\n\n%#v", result["authorization_key"])
-
 	if(result != nil && result["authorization_key"] == p.Key ){
 
 		fmt.Printf("\nGet ref to Firebase\n")
@@ -72,21 +68,17 @@ func (p *Payload) UploadToFB() error {
 
 		fmt.Printf("\nGet timestamp\n")
 		t := time.Now().Unix()
-		// t.Format("20060102150405")
-		fmt.Printf("%s",t)
-		fmt.Printf("\nPush to Firebase\n")
 		pushedFirego, err := fb.Push(t)
 		if err != nil {
-			fmt.Printf("\nError pushing\n")
 			return err;
 		}
+		fmt.Printf("\nPushed to Firebase\n")
 
 		var bar string
 		if err := pushedFirego.Value(&bar); err != nil {
 			return err
 		}
 	}
-
 	return err
 }
 
@@ -175,23 +167,12 @@ func (w Worker) start() {
 			}
 
 			func requestHandler(w http.ResponseWriter, r *http.Request, jobQueue chan Job) {
-				// Make sure we can only be called with an HTTP POST request.
 
-				// io.WriteString(w, "Hello world!")
-				// io.WriteString(w, r.URL.Path)
-				// if r.Method != "POST" {
-				// 	w.Header().Set("Allow", "POST")
-				// 	w.WriteHeader(http.StatusMethodNotAllowed)
-				// 	return
-				// }
-				// Parse feed
-
-				// feed := strings.TrimPrefix(r.URL.Path, "/")
+				// Parse request url
 				url := strings.TrimPrefix(r.URL.Path, "/")
 				urlSplit := strings.Split(url, "/")
-				fmt.Printf("%v",urlSplit)
-				fmt.Printf("Feed: %s",urlSplit[0])
-				fmt.Printf("auth: %s",urlSplit[1])
+
+				// Store args
 				feed,authKey := urlSplit[0],urlSplit[1]
 
 
