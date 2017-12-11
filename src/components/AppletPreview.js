@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
+
+import FCM from 'react-native-fcm';
+import * as firebase from 'firebase';
+
 
 export default class AppletPreview extends Component {
 
@@ -16,8 +20,58 @@ export default class AppletPreview extends Component {
     };
   }
 
+
+  subscribe = (userID, topic) => {
+    console.log("topic ", topic);
+    firebase.database()
+      .ref(`/users/${userID}/applet_subscriptions`)
+      .update({[topic]: true});
+    FCM.subscribeToTopic(topic);
+  }
+
+  unSubscribe = (userID, topic) => {
+    firebase.database()
+      .ref(`/users/${userID}/applet_subscriptions`)
+      .child(topic).remove();
+    FCM.unsubscribeFromTopic(topic);
+  }
+
+  onPress = () => {
+    const topic = this.props.appletID;
+    const userID = firebase.auth().currentUser.uid;
+    //Check if user is subscribed
+    firebase.database()
+      .ref(`/users/${userID}/applet_subscriptions/${topic}`)
+      .once('value')
+      .then( (snapshot) => {
+          if (snapshot.val()){
+            Alert.alert(
+              'You are subscribed to the feed ' + topic,
+              'Do you want yo unsubscribe?',
+              [
+                {text: 'Unsubscribe', onPress: () => this.unSubscribe(userID, topic)},
+                {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+              ],
+              { cancelable: false }
+            )
+          }
+          else {
+            Alert.alert(
+              'You are not subscribed to the feed ' + topic,
+              'Do you want yo subscribe?',
+              [
+                {text: 'Subscribe', onPress: () => this.subscribe(userID, topic)},
+                {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+              ],
+              { cancelable: false }
+            )
+          }
+      });
+    }
+
   render() {
     return (
+      <TouchableOpacity onPress={this.onPress}>
       <View style={this.bodyStyle()}>
         <View style={styles.body}>
           <Text style={styles.pingMeWhen}>Ping me when</Text>
@@ -30,6 +84,7 @@ export default class AppletPreview extends Component {
           <Text style={styles.lastActive}>last active today</Text>
         </View>
       </View>
+      </TouchableOpacity>
     );
   }
 }

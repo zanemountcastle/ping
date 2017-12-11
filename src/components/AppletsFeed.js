@@ -46,7 +46,7 @@ export default class AppletsFeed extends Component {
             />
           }>
           {Object.entries(this.props.feed).map(
-            ([key, value]) => <AppletPreview key={key} applet={value} />
+            ([key, value]) => <AppletPreview key={key} applet={value} appletID={key}/>
           )}
         </ScrollView>
       );
