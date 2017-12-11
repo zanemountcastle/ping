@@ -47,7 +47,7 @@ export default class AppletPreview extends Component {
           if (snapshot.val()){
             Alert.alert(
               'You are subscribed to the feed ' + topic,
-              'Do you want yo unsubscribe?',
+              'Do you want to unsubscribe?',
               [
                 {text: 'Unsubscribe', onPress: () => this.unSubscribe(userID, topic)},
                 {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
@@ -58,7 +58,7 @@ export default class AppletPreview extends Component {
           else {
             Alert.alert(
               'You are not subscribed to the feed ' + topic,
-              'Do you want yo subscribe?',
+              'Do you want to subscribe?',
               [
                 {text: 'Subscribe', onPress: () => this.subscribe(userID, topic)},
                 {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},

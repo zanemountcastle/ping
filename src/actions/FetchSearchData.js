@@ -30,7 +30,6 @@ export default function FetchSearchData(topic) {
 
           snapshot.forEach((feed) => {
              const feedID = feed.key;
-             console.log(feedID);
              if (feedID.indexOf(topic.toLowerCase()) > -1) {
                const promise = firebase.database().ref(`/feeds/${feedID}/metadata`)
                  .once('value')

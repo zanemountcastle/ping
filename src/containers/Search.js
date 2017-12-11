@@ -15,7 +15,7 @@ export class Search extends Component {
       return (
         <ScrollView contentInset={{bottom: 20}} >
           {Object.entries(this.props.search.data).map(
-            ([key, value]) => <AppletPreview key={key} applet={value} />
+            ([key, value]) => <AppletPreview key={key} applet={value} appletID={key} />
           )}
         </ScrollView>
       );
