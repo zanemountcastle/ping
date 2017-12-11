@@ -61,14 +61,14 @@ func (p *Payload) UploadToFB() error {
 	if(result != nil && result["authorization_key"] == p.Key ){
 
 		fmt.Printf("\nGet ref to Firebase\n")
-		fb, err = fb.Ref("/feeds/"+ p.Feed+"/activity")
+		activityfb, err := fb.Ref("/feeds/"+ p.Feed +"/activity")
 		if err != nil {
 			return err;
 		}
 
 		fmt.Printf("\nGet timestamp\n")
 		t := time.Now().Unix()
-		pushedFirego, err := fb.Push(t)
+		pushedFirego, err := activityfb.Push(t)
 		if err != nil {
 			return err;
 		}
@@ -79,11 +79,22 @@ func (p *Payload) UploadToFB() error {
 			fmt.Printf("Error with pushedFirego ")
 		}
 
+		var metadata map[string]interface{}
+
+		fb.Child("/feeds/"+p.Feed+"/metadata").Value(&metadata)
+
+			// fmt.Printf("Metadata %s",result["metadata"])
+			fmt.Printf("Metadata message %s",metadata["message"])
 		// Write to Firebase
 		url := "https://fcm.googleapis.com/fcm/send"
 
-			payload := strings.NewReader("{\n\t\"to\" : \"/topics/baraha\",\n\t\"notification\" : {\n      \"body\" : \"There is food in the Baraha!\",\n      \"title\" : \"Baraha!\"\n\t}\n}")
-
+			// payload := strings.NewReader("{\n\t\"to\" : \"/topics/baraha\",\n\t\"notification\" : {\n      \"body\" : \"There is food in the Baraha!\",\n      \"title\" : \"Food in Baraha!\"\n\t}\n}")
+			// msg := "{\n\t\"to\" : \"/topics/streetcat\",\n\t\"notification\" :  {\n      \"sound\" : \"true\",\n      \"body\" : \"Streetcat has entered the lab.\",\n      \"title\" : \"NYUAD\"\n\t}\n}"
+			msg := "{\n\t\"to\" : \"/topics/"+ p.Feed+"\",\n\t\"notification\" :  {\n      \"sound\" : \"true\",\n      \"body\" : \""+ metadata["message"].(string)+"\",\n      \"title\" : \""+metadata["organization"].(string)+"\"\n\t}\n}"
+			// fmt.Printf("metadata!! %s",msg)
+			// // .(string)metadata
+			payload := strings.NewReader(msg)
+      //
 			req, _ := http.NewRequest("POST", url, payload)
 
 			req.Header.Add("content-type", "application/json")
@@ -193,7 +204,6 @@ func (w Worker) start() {
 				urlSplit := strings.Split(url, "/")
 
 				// Store args
-				// if(urlSplit.len)
 				feed,authKey := urlSplit[0],urlSplit[1]
 
 
