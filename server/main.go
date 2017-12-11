@@ -35,6 +35,9 @@ type Payload struct {
 type Job struct {
 	Payload Payload
 }
+type AuthKey struct {
+	authorization_key string
+}
 
 func (p *Payload) UploadToFB() error {
 
@@ -83,8 +86,24 @@ fmt.Printf("Config JSON\n")
 
   fmt.Printf("push\n")
   // if(p.token == fb.Get("/feed/"+p.Feed)){
-   fb, err = fb.Ref("/feed/"+ p.Feed)
-   pushedFirego, err := fb.Push( p.Feed)
+	 // authKey, err :=fb.Ref("/feed/"+ p.Feed+"/authorization_key")
+
+  	var result map[string]interface{}
+
+	 fb.Child("/feeds/"+p.Feed).Value(&result)
+
+	 // if(result )
+//.LimitToFirst(1).OrderBy("feeds")
+	 // {//.Child(p.Feed).EqualTo(p.Feed).Value(&result); err != nil {
+		// 	    log.Fatal(err)
+		// 	}
+
+		fmt.Printf("\n\nLength %d",len(result))
+		fmt.Printf("%#v", result)
+		fmt.Printf("\n\n\n%#v", result["authorization_key"])
+	 // fmt.Printf( "\nAUTH KEY %s",authKey.Value())
+	 fb, err = fb.Ref("/feed/"+ p.Feed)
+	 pushedFirego, err := fb.Push( p.Feed)
   // }
 
   // fmt.Printf(pushedFirego)
