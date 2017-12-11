@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
+
+import FCM from 'react-native-fcm';
+import * as firebase from 'firebase';
+
 
 export default class AppletPreview extends Component {
 
@@ -16,20 +20,71 @@ export default class AppletPreview extends Component {
     };
   }
 
+
+  subscribe = (userID, topic) => {
+    console.log("topic ", topic);
+    firebase.database()
+      .ref(`/users/${userID}/applet_subscriptions`)
+      .update({[topic]: true});
+    FCM.subscribeToTopic(topic);
+  }
+
+  unSubscribe = (userID, topic) => {
+    firebase.database()
+      .ref(`/users/${userID}/applet_subscriptions`)
+      .child(topic).remove();
+    FCM.unsubscribeFromTopic(topic);
+  }
+
+  onPress = () => {
+    const topic = this.props.appletID;
+    const userID = firebase.auth().currentUser.uid;
+    //Check if user is subscribed
+    firebase.database()
+      .ref(`/users/${userID}/applet_subscriptions/${topic}`)
+      .once('value')
+      .then( (snapshot) => {
+          if (snapshot.val()){
+            Alert.alert(
+              'You are subscribed to the feed ' + topic,
+              'Do you want to unsubscribe?',
+              [
+                {text: 'Unsubscribe', onPress: () => this.unSubscribe(userID, topic)},
+                {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+              ],
+              { cancelable: false }
+            )
+          }
+          else {
+            Alert.alert(
+              'You are not subscribed to the feed ' + topic,
+              'Do you want to subscribe?',
+              [
+                {text: 'Subscribe', onPress: () => this.subscribe(userID, topic)},
+                {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+              ],
+              { cancelable: false }
+            )
+          }
+      });
+    }
+
   render() {
     return (
+      <TouchableOpacity onPress={this.onPress}>
       <View style={this.bodyStyle()}>
         <View style={styles.body}>
           <Text style={styles.pingMeWhen}>Ping me when</Text>
           <View style={styles.divider} />
-          <Text style={styles.titleText}>{this.props.applet.title}</Text>
+          <Text style={styles.messageText}>{this.props.applet.message}</Text>
           <Text style={styles.byLine}>by {this.props.applet.organization}</Text>
         </View>
         <View style={styles.footer}>
-          <Text style={styles.status}>{this.props.applet.status}</Text>
-          <Text style={styles.lastActive}>{this.props.applet.lastActive}</Text>
+          <Text style={styles.status}>On</Text>
+          <Text style={styles.lastActive}>last active today</Text>
         </View>
       </View>
+      </TouchableOpacity>
     );
   }
 }
@@ -51,7 +106,7 @@ let styles = StyleSheet.create({
     width: 35,
     backgroundColor: "#FFF"
   },
-  titleText: {
+  messageText: {
     marginTop: 12,
     color: "#FFF",
     fontSize: 24,

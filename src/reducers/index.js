@@ -1,6 +1,12 @@
 import { combineReducers } from 'redux';
-import AppletReducer from './AppletReducer';
+import MyAppletsReducer from './MyAppletsReducer';
+import DiscoveryReducer from './DiscoveryReducer';
+import SearchReducer from './SearchReducer';
+import CreateAnAppletReducer from './CreateAnAppletReducer';
 
 export default combineReducers({
-    applets: AppletReducer
+    applets: MyAppletsReducer,
+    discovery: DiscoveryReducer,
+    search: SearchReducer,
+    create: CreateAnAppletReducer,
 });

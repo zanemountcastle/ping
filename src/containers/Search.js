@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ScrollView, Alert, ListView, Platform  } from 'react-native';
-import { Header } from 'react-native-elements';
+import {   ActivityIndicator, StyleSheet, Text, View, ScrollView, Alert, ListView, Platform  } from 'react-native';
+import { Header, SearchBar } from 'react-native-elements';
+import { connect } from 'react-redux';
 
-export default class Search extends Component {
+import FetchSearchData from '../actions/FetchSearchData';
+
+import { AppletPreview } from '../components';
+
+
+export class Search extends Component {
+
+  renderSearchResuls() {
+    if (this.props.search.data) {
+      return (
+        <ScrollView contentInset={{bottom: 20}} >
+          {Object.entries(this.props.search.data).map(
+            ([key, value]) => <AppletPreview key={key} applet={value} appletID={key} />
+          )}
+        </ScrollView>
+      );
+    }
+  }
 
   render() {
       return (
@@ -11,9 +29,14 @@ export default class Search extends Component {
             centerComponent={{ text: 'Search', style: { color: '#4D4C4C', fontSize: 20, fontWeight: '700' } }}
             outerContainerStyles={{ backgroundColor: '#fff' }}
           />
-          <View style={styles.body}>
-            <Text>Search page!</Text>
-          </View>
+          <SearchBar
+             lightTheme
+             round
+             containerStyle={styles.searchBox}
+             onChangeText={(text) => this.setState(this.props.FetchSearchData(text))}
+             placeholder='Type Here...'
+          />
+          {this.renderSearchResuls()}
         </View>
       );
     }
@@ -29,6 +52,20 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
+  searchBox: {
+    width: '100%',
+    backgroundColor: '#FFF',
+    borderBottomColor: '#FFF',
+  }
 });
+
+
+function mapStateToProps(state) {
+  return {
+    search: state.search
+  }
+};
+
+export default connect(mapStateToProps, { FetchSearchData })(Search);
