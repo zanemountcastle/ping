@@ -232,7 +232,8 @@ func (w Worker) start() {
 				// Start the dispatcher.
 				dispatcher := NewDispatcher(jobQueue, *maxWorkers)
 				dispatcher.run()
-
+				// http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./public"))))
+				http.Handle("/docs/", http.StripPrefix("/docs/", http.FileServer(http.Dir("./ping"))))
 				// Start the HTTP handler.
 				http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 					requestHandler(w, r, jobQueue)
