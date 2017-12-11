@@ -34,6 +34,18 @@ export default class login extends React.Component {
       FCM.getFCMToken().then(token => {
         userID = firebase.auth().currentUser.uid;
         firebase.database().ref('/users/' + userID).update({token: token });
+
+        firebase.database()
+          .ref(`/users/${userID}/applet_subscriptions`)
+          .once('value')
+          .then((snapshot) => {
+            // Loop through each applet by ID
+            snapshot.forEach((applet_subscription) => {
+              const appletID = applet_subscription.key;
+              FCM.subscribeToTopic(appletID);
+            });
+          });
+
       });
       this.props.navigation.navigate('Main');
 
