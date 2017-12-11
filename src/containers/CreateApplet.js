@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Alert } from 'react-native';
 import { Button, Header, FormLabel, FormInput } from 'react-native-elements';
 import { uuid, randomColor } from '../lib/Utilities';
 
@@ -14,15 +14,24 @@ export class CreateApplet extends Component {
         appletId: '',
         color: randomColor(),
         message: '',
-        organization: 'NYUAD'
+        organization: 'NYUAD',
+        authKey: uuid(),
     };
   }
 
   _onFormSubmission() {
       const s = this.state;
-      const authKey = uuid();
       this.props.CreateAnApplet(
-        s.appletId, s.message, s.color, s.organization, authKey);
+        s.appletId, s.message, s.color, s.organization, s.authKey);
+  }
+
+  _renderPOSTUrl() {
+    if ( this.props.create.successful ) {
+      return Alert.alert(
+        "POST URL for feed",
+        `ping.zanemountcastle.com/${this.state.appletId}/${this.state.authKey}`
+      )
+    }
   }
 
   render() {
@@ -59,6 +68,8 @@ export class CreateApplet extends Component {
             disabled={this.props.create.isFetching}
           />
 
+          {this._renderPOSTUrl()}
+
         </View>
       );
     }
@@ -85,6 +96,9 @@ const styles = StyleSheet.create({
     width: 250,
     borderRadius: 5,
   },
+  url: {
+    margin: 20,
+  }
 });
 
 function mapStateToProps(state) {
