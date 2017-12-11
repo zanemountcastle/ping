@@ -24,7 +24,7 @@ import (
 )
 type Payload struct {
     Feed string
-    // Token string
+    Key string
     // title string
     // body string
     // feedId int32
@@ -83,8 +83,6 @@ fmt.Printf("Config JSON\n")
 		return encodeErr
 	}
 
-
-  fmt.Printf("push\n")
   // if(p.token == fb.Get("/feed/"+p.Feed)){
 	 // authKey, err :=fb.Ref("/feed/"+ p.Feed+"/authorization_key")
 
@@ -92,34 +90,47 @@ fmt.Printf("Config JSON\n")
 
 	 fb.Child("/feeds/"+p.Feed).Value(&result)
 
-	 // if(result )
+	// if(result == nil){
+	// 	return "Feed does not exist"
+	// }
+	// if(result != p.key){
+	// 	return "Feed does not exist"
+	// }
 //.LimitToFirst(1).OrderBy("feeds")
 	 // {//.Child(p.Feed).EqualTo(p.Feed).Value(&result); err != nil {
 		// 	    log.Fatal(err)
 		// 	}
 
+
+
 		fmt.Printf("\n\nLength %d",len(result))
 		fmt.Printf("%#v", result)
 		fmt.Printf("\n\n\n%#v", result["authorization_key"])
 	 // fmt.Printf( "\nAUTH KEY %s",authKey.Value())
-	 fb, err = fb.Ref("/feed/"+ p.Feed)
-	 pushedFirego, err := fb.Push( p.Feed)
+
+	 if(result != nil && result["authorization_key"] == p.Key ){
+
+		 		fmt.Printf("PUSHH\n")
+		 fb, err = fb.Ref("/feed/"+ p.Feed)
+		 pushedFirego, err := fb.Push( p.Feed)
+		 if err != nil {
+
+				 // fmt.Printf("Error: " + err.Error())
+			return err;
+		 }
+
+		 var bar string
+		 if err := pushedFirego.Value(&bar); err != nil {
+			 // fmt.Printf("Error: " + err.Error())
+			return err
+		 }
+	 }
   // }
 
   // fmt.Printf(pushedFirego)
 
   // fmt.Printf(err.Error())
-  if err != nil {
 
-      // fmt.Printf("Error: " + err.Error())
-  	return err;
-  }
-
-  var bar string
-  if err := pushedFirego.Value(&bar); err != nil {
-    // fmt.Printf("Error: " + err.Error())
-  	return err
-  }
 
   // // prints "https://my-firebase-app.firebaseIO.com/-JgvLHXszP4xS0AUN-nI: bar"
   // fmt.Printf("%s: %s\n", pushedFirego, bar)
@@ -262,7 +273,7 @@ func requestHandler(w http.ResponseWriter, r *http.Request, jobQueue chan Job) {
 	// }
 
 	// Create Job and push the work onto the jobQueue.
-  p := Payload{Feed: feed}
+  p := Payload{Feed: feed, Key:authKey}
 	job := Job{Payload: p}
 	jobQueue <- job
 
