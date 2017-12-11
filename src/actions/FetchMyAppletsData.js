@@ -33,7 +33,12 @@ export default function FetchMyAppletsData() {
             .then((applet_snapshot) => {
               // Add each applet's data to a `subscriptions` object
               subscriptions[appletID] = applet_snapshot.val();
-            }, (error) => console.log("ERROR:", error));
+            }, (error) => {
+              return dispatch({
+                type: FETCHING_APPLET_DATA_FAIL,
+                payload: error,
+              });
+            });
           reads.push(promise)
         });
 
