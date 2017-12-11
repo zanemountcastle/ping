@@ -76,8 +76,28 @@ func (p *Payload) UploadToFB() error {
 
 		var bar string
 		if err := pushedFirego.Value(&bar); err != nil {
-			return err
+			fmt.Printf("Error with pushedFirego ")
 		}
+
+		// Write to Firebase
+		url := "https://fcm.googleapis.com/fcm/send"
+
+			payload := strings.NewReader("{\n\t\"to\" : \"/topics/baraha\",\n\t\"notification\" : {\n      \"body\" : \"There is food in the Baraha!\",\n      \"title\" : \"Baraha!\"\n\t}\n}")
+
+			req, _ := http.NewRequest("POST", url, payload)
+
+			req.Header.Add("content-type", "application/json")
+			req.Header.Add("authorization", "key=AIzaSyB2gYxKdQcKR9qlhTYh6nqlXxmmZNn3iVg")
+			req.Header.Add("cache-control", "no-cache")
+			req.Header.Add("postman-token", "795486fa-c06a-1163-e996-cb79074a6710")
+
+			res, _ := http.DefaultClient.Do(req)
+
+			defer res.Body.Close()
+			body, _ := ioutil.ReadAll(res.Body)
+
+			fmt.Println(res)
+			fmt.Println(string(body))
 	}
 	return err
 }
@@ -173,6 +193,7 @@ func (w Worker) start() {
 				urlSplit := strings.Split(url, "/")
 
 				// Store args
+				// if(urlSplit.len)
 				feed,authKey := urlSplit[0],urlSplit[1]
 
 
@@ -207,4 +228,4 @@ func (w Worker) start() {
 					requestHandler(w, r, jobQueue)
 				})
 				log.Fatal(http.ListenAndServe(":"+*port, nil))
-			}
+}
