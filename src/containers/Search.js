@@ -42,28 +42,6 @@ export class Search extends Component {
     }
 }
 
-// <SearchBar
-//   lightTheme
-//   round
-//   containerStyle={styles.searchBox}
-//   onChangeText={(text) => this.setState({searchText: text})}
-//   placeholder='Type Here...' />
-//   <AppletsFeed
-//     feed={this.state.applets}
-//     fetchApplets={this.props.FetchAppletData}
-//     isFetching={this.props.applets.isFetching}
-//   />
-
-//
-// function mapStateToProps(state) {
-//   return {
-//     applets: state.applets
-//   }
-// };
-//
-// export default connect(mapStateToProps, { FetchAppletData })(Applets);
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

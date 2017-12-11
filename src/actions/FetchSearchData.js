@@ -37,7 +37,12 @@ export default function FetchSearchData(topic) {
                  .then((applet_snapshot) => {
                    // Add each applet's data to a `subscriptions` object
                    subscriptions[feedID] = applet_snapshot.val();
-                 }, (error) => console.log("ERROR:", error));
+                 }, (error) => {
+                  return dispatch({
+                    type: FETCHING_SEARCH_DATA_SUCCESS,
+                    payload: subscriptions,
+                  });
+                });
                 reads.push(promise);
              }
           });
