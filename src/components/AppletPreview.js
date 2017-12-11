@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
+
 import FCM from 'react-native-fcm';
 import * as firebase from 'firebase';
+
+
 export default class AppletPreview extends Component {
 
   // Dynamically sets the background color of the previews
@@ -16,6 +19,7 @@ export default class AppletPreview extends Component {
       minHeight: 200,
     };
   }
+
 
   subscribe = (userID, topic) => {
     console.log("topic ", topic);
@@ -40,14 +44,30 @@ export default class AppletPreview extends Component {
       .ref(`/users/${userID}/applet_subscriptions/${topic}`)
       .once('value')
       .then( (snapshot) => {
-        if (snapshot.val()){
-          this.unSubscribe(userID, topic);
-        }
-        else {
-          this.subscribe(userID, topic);
-        }
+          if (snapshot.val()){
+            Alert.alert(
+              'You are subscribed to the feed ' + topic,
+              'Do you want yo unsubscribe?',
+              [
+                {text: 'Unsubscribe', onPress: () => this.unSubscribe(userID, topic)},
+                {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+              ],
+              { cancelable: false }
+            )
+          }
+          else {
+            Alert.alert(
+              'You are not subscribed to the feed ' + topic,
+              'Do you want yo subscribe?',
+              [
+                {text: 'Subscribe', onPress: () => this.subscribe(userID, topic)},
+                {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+              ],
+              { cancelable: false }
+            )
+          }
       });
-  }
+    }
 
   render() {
     return (
