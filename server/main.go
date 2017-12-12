@@ -16,8 +16,6 @@ import (
 	"io/ioutil"
 	"golang.org/x/oauth2/google"
 	"time"
-	// "fmt"
-    "github.com/NaySoftware/go-fcm"
 )
 
 // Payload holds the data to push to firebase
@@ -78,70 +76,29 @@ func (p *Payload) UploadToFB() error {
 
 		var bar string
 		if err := pushedFirego.Value(&bar); err != nil {
-			return err
+			fmt.Printf("Error with pushedFirego ")
 		}
+
+		// Write to Firebase
+		url := "https://fcm.googleapis.com/fcm/send"
+
+			payload := strings.NewReader("{\n\t\"to\" : \"/topics/baraha\",\n\t\"notification\" : {\n      \"body\" : \"There is food in the Baraha!\",\n      \"title\" : \"Food in Baraha!\"\n\t}\n}")
+
+			req, _ := http.NewRequest("POST", url, payload)
+
+			req.Header.Add("content-type", "application/json")
+			req.Header.Add("authorization", "key=AIzaSyB2gYxKdQcKR9qlhTYh6nqlXxmmZNn3iVg")
+			req.Header.Add("cache-control", "no-cache")
+			req.Header.Add("postman-token", "795486fa-c06a-1163-e996-cb79074a6710")
+
+			res, _ := http.DefaultClient.Do(req)
+
+			defer res.Body.Close()
+			body, _ := ioutil.ReadAll(res.Body)
+
+			fmt.Println(res)
+			fmt.Println(string(body))
 	}
-
-	//push to FCME
-	// reader := strings.NewReader(`{"body":123}`)
-	// request, err := http.NewRequest("GET", " https://fcm.googleapis.com/v1/{parent=projects/*}/messages:send", reader)
-	// // TODO: check err
-	// client := &http.Client{}
-	// resp, err := client.Do(request)
-	// // TODO: check err
-	// data := map[string]string{
-	// 	"msg": "Food",
-	// 	"sum": "",
-	// }
-	// topic := "/baraha"
-  //
-	// c := fcm.NewFcmClient(conf.Client(oauth2.NoContext))
-  //
-	// fmt.Printf("\nAuthorize\n")
-	// c.NewFcmMsgTo(topic, data)
-	// fmt.Printf("\nPushed to FCM\n")
-  //
-  //
-	// status, err := c.Send()
-  //
-  //
-	// if err == nil {
-  //   status.PrintResults()
-	// } else {
-	// 	fmt.Println(err)
-	// }
-  //
-	// ctx := context.Background()
-  //
-	// client, err := google.DefaultClient(ctx, compute.ComputeScope)
-	// if err != nil {
-	// 				//...
-	// }
-	// computeService, err := compute.New(client)
-	// if err != nil {
-	// 				//...
-	// }
-
-	topic:="/baraha"
-	data := map[string]string{
-		"msg": "Food",
-		"sum": "In Baraha",
-	}
-
-	c := fcm.NewFcmClient("AAAAlBM7aU8:APA91bF-YRfAQRrakyr47nVjnC1SVGyr8T8slPlAgEpgvqsJ-YBxs6UtK-bSHlRlSkXx9IJM03dPLop67CMD2SuBcU2Dd0FUTN3WiFRzx-LDgCZd4dRJKRqLOhTd-Ti2Vb9GS2QZ7C-l")
-	c.NewFcmMsgTo(topic, data)
-
-
-	status, err := c.Send()
-
-
-	if err == nil {
-    status.PrintResults()
-	} else {
-		fmt.Println(err)
-	}
-
-
 	return err
 }
 
@@ -249,26 +206,6 @@ func (w Worker) start() {
 				// Render success.
 				w.WriteHeader(http.StatusCreated)
 			}
-			func getKey(w http.ResponseWriter, r *http.Request) {
-
-				// Add auth credentials
-				d, err := ioutil.ReadFile("ping-fdb36-firebase-adminsdk-plh3v-c9bf03cb29.json")
-				if err != nil {
-
-						fmt.Printf("error");
-					// return err
-				}
-
-				conf, err := google.JWTConfigFromJSON(d, "https://www.googleapis.com/auth/userinfo.email",
-					"https://www.googleapis.com/auth/firebase.database")
-				if err != nil {
-					fmt.Printf("error");
-					// return err
-				}
-				fmt.Printf("KEY: %d\n", conf.Client(oauth2.NoContext))
-			}
-
-
 
 			func main() {
 				var (
@@ -286,11 +223,8 @@ func (w Worker) start() {
 				dispatcher.run()
 
 				// Start the HTTP handler.
-				http.HandleFunc("/getKey/", func(w http.ResponseWriter, r *http.Request) {
-					getKey(w, r)
-				})
 				http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 					requestHandler(w, r, jobQueue)
 				})
 				log.Fatal(http.ListenAndServe(":"+*port, nil))
-			}
+}
